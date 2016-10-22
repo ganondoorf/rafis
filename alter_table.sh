@@ -6,9 +6,3 @@ dawadawdawdo`
 dawadawdawdo`
 dawadawdawdo`
 dawadawdawdo`
-dawadawdawdo`
-dawadawdawdo`
-dawadawdawdo`
-dawadawdawdo`
-dawadawdawdo`
-dawadawdawdo`
