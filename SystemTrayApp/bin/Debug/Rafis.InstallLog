@@ -1,0 +1,272 @@
+﻿Installing assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+Installing service Service1...
+Service Service1 has been successfully installed.
+Creating EventLog source Service1 in log Application...
+Committing assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+Uninstalling assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+Removing EventLog source Service1.
+An exception occurred during the uninstallation of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: Requested registry access is not allowed.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Uninstalling assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Uninstalling assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+Removing EventLog source Service1.
+Service Service1 is being removed from the system...
+Service Service1 was successfully removed from the system.
+Installing assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+Installing service Rafis...
+Service Rafis has been successfully installed.
+Creating EventLog source Rafis in log Application...
+Committing assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+Uninstalling assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\Rafis.InstallLog
+Removing EventLog source Rafis.
+Service Rafis is being removed from the system...
+Service Rafis was successfully removed from the system.
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Tentativa de parar o serviço Rafis.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Criando a origem de EventLog Rafis no log Application...
+Revertendo o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Restaurando o log de eventos para o estado anterior da origem Rafis.
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Criando a origem de EventLog Rafis no log Application...
+Revertendo o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Restaurando o log de eventos para o estado anterior da origem Rafis.
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Ocorreu uma exceção durante a desinstalação do instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: Acesso ao Registro solicitado não é permitido.
+Ocorreu uma exceção ao desinstalar. Essa exceção será ignorada e a desinstalação continuará. Mas talvez o aplicativo não seja totalmente desinstalado após a conclusão da desinstalação.
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Ocorreu uma exceção durante a desinstalação do instalador System.Diagnostics.EventLogInstaller.
+System.Security.SecurityException: Acesso ao Registro solicitado não é permitido.
+Ocorreu uma exceção ao desinstalar. Essa exceção será ignorada e a desinstalação continuará. Mas talvez o aplicativo não seja totalmente desinstalado após a conclusão da desinstalação.
+Desinstalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Removendo a origem do EventLog Rafis.
+Serviço Rafis está sendo removido do sistema...
+Serviço Rafis foi removido com êxito do sistema.
+Instalando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog

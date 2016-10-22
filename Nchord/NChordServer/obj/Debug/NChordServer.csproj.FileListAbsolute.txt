@@ -1,0 +1,24 @@
+C:\Nchord\NChordServer\bin\Debug\NChord.exe
+C:\Nchord\NChordServer\bin\Debug\NChord.pdb
+C:\Nchord\NChordServer\bin\Debug\NChordLib.dll
+C:\Nchord\NChordServer\bin\Debug\NChordLib.pdb
+C:\Nchord\NChordServer\obj\Debug\NChordServer.csprojResolveAssemblyReference.cache
+C:\Nchord\NChordServer\obj\Debug\NChord.exe
+C:\Nchord\NChordServer\obj\Debug\NChord.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\bin\Debug\NChord.exe
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\bin\Debug\NChord.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\bin\Debug\NChordLib.dll
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\bin\Debug\NChordLib.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\bin\Debug\NChord.exe.CodeAnalysisLog.xml
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\bin\Debug\NChord.exe.lastcodeanalysissucceeded
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\NChordServer.csprojResolveAssemblyReference.cache
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rchord.exe.config
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rchord.exe.manifest
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rchord.application
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rchord.exe
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rchord.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.TrustInfo.xml
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.exe.manifest
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.application
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.exe
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.pdb

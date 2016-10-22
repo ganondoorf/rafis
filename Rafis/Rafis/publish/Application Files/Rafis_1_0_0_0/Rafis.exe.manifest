@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Rafis.exe" version="1.0.0.0" publicKeyToken="fbe83418994a2c3b" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Rafis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Rafis.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rafis.exe" size="6656">
+      <assemblyIdentity name="Rafis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>WlX5/bikNW8S3y+3ihrDbZPC3kqY720duA8vH+ofyNQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Rafis.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=iWin\Clayton" issuerKeyHash="6507539e37b8f011092d5c6809f0b866ef76acf9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ShAfTCpltWropEKDk7aGY234bg4Zpqj4sqlCgwyfT8Y=</DigestValue></Reference></SignedInfo><SignatureValue>o9bycSlG51a1l6tXkPGtAho0aMO5h6XcZlR2m5tv7n8CdVoYHNpsGgaofP99Dt7yO2R/5IFfRAYzXot/5SzcU4RSuNknAPfy17zBx3ghvm734g0znQ77rbi4VLToalf7R26Es1rPtztfT/l7Yfn/updJwwFl0SUu4yorcAo16xc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>9Ss0H6qOBGREUpJn/pXygG7vM8ZsVX7QNpNhJX5mZwHbyx16ohYAlfEkVjBv3FyZ5nIVV9xfngUPlrMsYuYBnGES9V9ABDh6FInabJxNsXbo+XHMaEcPfCtRjzwIREIpqYPrK7fefp18Wjsswh48rhemKedIhxCHog74GGD0xUs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c64f9f0c8342a9b2f8a8a6190e6ef86d6386b6938342a4e86ab5652a4c1f104a" Description="" Url=""><as:assemblyIdentity name="Rafis.exe" version="1.0.0.0" publicKeyToken="fbe83418994a2c3b" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=iWin\Clayton</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>FUziqROIfmNb8S/Tw61AxoJ+8SmBDm6fhUCtTWDCNrI=</DigestValue></Reference></SignedInfo><SignatureValue>X8MNeEAK+FyC/X1jIZdyN//oTzKpHLbg+c4toyrGG/KH4H1c0Ox0q/t8o7JNY0sV9VL37wqzDYgM9BaqnCSHwCsU0/GLiFjn5G3iTCwshKGtI4trb0O+eOjIB0kN+/hE8gul9h2xudRA6eXmOjkZTxQGNWJmwCH5QI1JYcdaNkY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>9Ss0H6qOBGREUpJn/pXygG7vM8ZsVX7QNpNhJX5mZwHbyx16ohYAlfEkVjBv3FyZ5nIVV9xfngUPlrMsYuYBnGES9V9ABDh6FInabJxNsXbo+XHMaEcPfCtRjzwIREIpqYPrK7fefp18Wjsswh48rhemKedIhxCHog74GGD0xUs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQEGGrlxjmMZdLlL254jk7djANBgkqhkiG9w0BAQsFADAjMSEwHwYDVQQDHhgAaQBXAGkAbgBcAEMAbABhAHkAdABvAG4wHhcNMTUwNjE2MDEyNjE0WhcNMTYwNjE1MDcyNjE0WjAjMSEwHwYDVQQDHhgAaQBXAGkAbgBcAEMAbABhAHkAdABvAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAPUrNB+qjgRkRFKSZ/6V8oBu7zPGbFV+0DaTYSV+ZmcB28sdeqIWAJXxJFYwb9xcmeZyFVfcX54FD5azLGLmAZxhEvVfQAQ4ehSJ2mycTbF26PlxzGhHD3wrUY88CERCKamD6yu33n6dfFo7LMIePK4XpinnSIcQh6IO+Bhg9MVLAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAWxgb6/7RD3RYx/i/b/dFrHtpDdbbHO6k0HiELKZzCd2eE4QIQADiuR9o1YcXskeSSvXLqL6IAVOIqQxMAxJf915MWD5nDxBFUMnsKQY14pJJwPSZcH9aN/aitkvfM+r2nxNjv1ICCEExnbALRZXsQRA0Aqni9lgx3X/drXYe7eo=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3cb04880-8922-4e66-8d1e-4d384038052e"
+  name="ChordTopoMapSample"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="841b9285-b788-4fc2-859d-3e06ecd44b64"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DChordTopoMapSample"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="d4c0c13f-006d-40dc-9f92-ec6c54a4a79b">
+      <profileInstance
+        Id="e4ae52a8-cb9d-4171-8128-5f58a1827d56"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="1a6d5992-8ded-4a91-a893-f6eedabecaa4"
+        name="Program"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="17ae130e-21fc-48b8-9702-c1041902746f"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="615874c5-1182-4f5c-bfd1-5b7d3cbad449"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d20c3e71-f8fb-4296-9934-0a63ebc454aa">
+                <propertyInstance
+                  Id="dc20ebc9-4846-47b0-994b-a4494576dc3f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="10103580-3300-495e-889c-8c8012cc3505">
+                <propertyInstance
+                  Id="bcb8f250-f038-4655-b426-335a58c65fd1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dacff939-89d6-49f9-ad82-a6d21bd17443">
+                <propertyInstance
+                  Id="da6245a7-9dd1-4fc5-bcf9-5f639d320463"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d724e20-090e-44a7-a3a7-8979b7471a12">
+                <propertyInstance
+                  Id="bff3a6b3-88f2-441e-a963-ed65e1f109d9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b1a4c43-3991-4599-8c95-5775e4b98b13">
+                <propertyInstance
+                  Id="4c50bf75-985e-4c6f-b89b-5fcac694fe9a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="2c9f9206-5091-4523-85de-00cb4515e91a"
+            name="MaxNodeLimit"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="081cb6ed-210d-4cc0-9566-6e5c05c76639"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3DMaxNodeLimit"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d9bade76-09cc-4e2f-a9b0-130ca7ec42a5"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba597a86-af5f-430c-8230-619c7b633fa0">
+                    <propertyInstance
+                      Id="b0892c2d-b795-4951-88b0-17acfdddcfa9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df0fbbb8-b096-40d2-9a7d-c2ffec200062">
+                    <propertyInstance
+                      Id="33f16aab-a964-47dc-9cd7-7c37a9a59e2f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e4aa3e2-fe3c-43d3-b9aa-fdc44ba6d66b">
+                    <propertyInstance
+                      Id="700644aa-a096-4cfc-adf0-c316d716ed7b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e775afb3-ea30-474a-9cd2-10bfea598004">
+                    <propertyInstance
+                      Id="d0a2a2ab-27aa-4c8c-b93f-b10c428b4d84"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="061f9f34-0b45-4ed2-a988-b73228b0fd91">
+                    <propertyInstance
+                      Id="a8b2034c-6657-47e8-ab53-3971b4b987de"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </property>
+          <property
+            Id="86b96a47-2fd9-4d30-b646-2f69b3382b16"
+            name="ColorMap"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="d1169a79-5d0f-4a6d-aaa2-4fef0f380bf5"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3DColorMap"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c98457c6-36a0-4631-80ee-4d29461c2d43"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2fd45c0-e178-4ce6-9c8b-07f68d440854">
+                    <propertyInstance
+                      Id="8a1af765-2dd0-410e-8b95-4f98f7d7dc25"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2cf17eab-dd2f-4aa1-b172-e0c8c8b0d45d">
+                    <propertyInstance
+                      Id="dabc369b-7d16-4f8b-ba97-baeeb438c9e4"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cc25420a-dfe1-4de7-8945-1e0a4b10088e">
+                    <propertyInstance
+                      Id="dbd12be5-1f6a-4778-ae43-53208350d5cb"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c1bdd6c6-308e-454b-8896-9e77d27c109c">
+                    <propertyInstance
+                      Id="c8d42bc8-9ba2-4536-a21c-dac7db3b6885"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b066c8a-8107-4038-92b0-1060e25250dc">
+                    <propertyInstance
+                      Id="7547058b-074d-44de-a462-dddf30406252"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="d68b7e6c-d205-4c73-b5c8-d9c02616af67"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="77661435-e220-46b3-96bb-0f749e09f0a4"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="980a6ed7-8fa4-485d-a9ce-a04edb6eb43f"
+                LastKnownName="Color"
+                LastKnownLocation="Package5_1548.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="77689357-caf8-4390-b6e0-8d83c5f7777a"
+            name="Main"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bf2f36a9-ff5a-4bff-bdfc-03e32f30b02d"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DMain OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b201822b-827f-4334-8528-42027aaa92c8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c2832451-c397-4b9d-a20b-54a2ec3c0915">
+                    <propertyInstance
+                      Id="02389123-1da6-4b02-86bb-5bb9c0f61bf6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="860ba71c-b917-4b55-8253-e6d1d1f60a56">
+                    <propertyInstance
+                      Id="6a1fc5b9-7e30-4e7d-9ea5-111daf16a1f3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9acb57c0-d59b-4c60-becd-89b5011e56cc">
+                    <propertyInstance
+                      Id="48a7f949-077b-4347-b511-6dcc66aa8e86"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12db16cb-8db5-4123-a1da-2903040148b8">
+                    <propertyInstance
+                      Id="8979470d-4af9-46cb-8082-228e76e2340d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a1d77e77-af1e-4db4-ad90-44cfd38cbb09">
+                    <propertyInstance
+                      Id="4578e7ec-b776-4f12-a879-da597a8e2aa6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0d444158-6e0c-4562-8a6f-8cd51b5cf5f0">
+                    <propertyInstance
+                      Id="20ae62c8-ffd8-4b4e-9c1a-75d76ef8deac"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="09fcda4f-48b6-41c4-97df-68855faf37e7"
+                  name="args"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="57482930-afec-49e1-ae56-581ffd8b0107"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DMain OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3Dargs"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b4eec660-a496-4a8f-b861-78ff4022f6d0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="67f56772-49ac-4ed2-833f-38803068b39d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8dfdc38b-8938-40ca-b6f2-79dec6cd95e2"
+            name="PrintUsage"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="fde46a7f-2b77-4211-a3f7-75207f11434b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3DPrintUsage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e75d3a9c-eb92-40eb-8665-765905e8424c"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ffdc6926-4fe5-4877-ae78-b7b3ad450825">
+                    <propertyInstance
+                      Id="6bbac90d-14f6-4eaa-950b-1ba15eca9d9b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="812ee510-8817-4178-b983-228163a9ff2b">
+                    <propertyInstance
+                      Id="8ab4c266-a89f-4340-9685-b50e234c4bd5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d54b9b7f-3dc2-4a1d-858a-5f703649a429">
+                    <propertyInstance
+                      Id="18ab34c2-f189-4405-954a-ebec72232ef4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a83725cb-dd25-42d0-aa2c-50154e8c06b1">
+                    <propertyInstance
+                      Id="934971aa-ab28-4432-a133-23420eaff4d7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73e9c103-d538-460a-bbe1-4d044a9a3123">
+                    <propertyInstance
+                      Id="66e8e1ea-d70d-4e90-a697-3c310492b5dc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="51430f51-660a-4927-8647-d5d7a1eb13fc">
+                    <propertyInstance
+                      Id="42dd9f91-01f5-4be4-aa2e-9ad32b3617db"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="3afa32e7-12b2-4f1c-8041-93d5cc27aac0"
+            name="GetNodeList"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="62a74661-a0b1-4c16-b824-db0fe7409b73"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGetNodeList OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="846f6208-828f-4790-9cf0-eaf646f4546d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45b55d51-ca95-4f69-a352-3f19cd71e068">
+                    <propertyInstance
+                      Id="3b9cafb2-1593-46c2-9bf0-b7afed73bcd1"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4c86a9fa-66b8-41af-84d2-260f7b00a447">
+                    <propertyInstance
+                      Id="7d8c629e-b841-42a3-940d-4c5fae62beb9"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1edfc872-c220-45c8-9664-f4950a0b9860">
+                    <propertyInstance
+                      Id="46d9a017-55ee-45f4-9622-b226fb849e7b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9a90f79-bc57-4d1a-915a-970de7cfa466">
+                    <propertyInstance
+                      Id="8bb4f3b8-facd-4066-81f8-5d880e239def"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e0097de-456e-45aa-9da9-c2a12203834d">
+                    <propertyInstance
+                      Id="1ca0e48e-9373-4a32-a068-baa4b4c2efb6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6d2525e-1a7b-4879-9bf3-43ede94b42cf">
+                    <propertyInstance
+                      Id="c3a90d64-cd66-4666-95ce-5258d0699279"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b9fd7c90-46a7-4239-a708-923a8c6024dc"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc155c0b-00e0-48d2-9f39-8e3727160e16"
+                      LastKnownName="List&lt;ChordNode‎&gt;"
+                      LastKnownLocation="Package4_1548.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17875e89-14f5-41f5-bc44-3dd135d1a4af"
+                  name="seedNode"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="afcb7ee1-281c-4eda-bac9-31f0b33770bf"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGetNodeList OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]) ParameterIdentifier%3DseedNode"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d3f51bf3-e286-4a14-8991-3815222bd3ff"
+                      LastKnownName="ChordNode"
+                      LastKnownLocation="Package1_1548.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1e4fd8ae-5387-4397-86a4-95281bde58fb"
+            name="GenerateMap"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="166066de-816d-4724-af34-8d3d2e8de9de"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateMap OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]) ParamKind%3DRef)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32) ParamKind%3DRef)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8af59aed-d31e-42ce-bde5-e5f7953df0b8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5aa2ef1c-55ab-4dc5-aa8b-4d6f7163beff">
+                    <propertyInstance
+                      Id="ab1ba65e-a4b6-48ef-b1a1-3f9f1fb434f2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="68779c77-452e-477d-9074-0386f23cd756">
+                    <propertyInstance
+                      Id="1ae9c50f-27c3-4cd3-a837-b8b42a7a4476"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="294b8252-e965-4844-bb33-3bb2fedc65c4">
+                    <propertyInstance
+                      Id="59e7c233-ae36-4bc9-9ce8-3831d1359694"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef96154a-6223-4f4d-a91b-4e12c7154ad0">
+                    <propertyInstance
+                      Id="aab00264-15d7-48b6-a4d8-b9e39244a242"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd98d7f6-df6b-455b-8846-ce87b0c2773e">
+                    <propertyInstance
+                      Id="f1c573e2-2bba-465f-82b9-b67ca2ebeba6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="093cb975-a6d1-420a-bfc5-d9b330f7ac99">
+                    <propertyInstance
+                      Id="8ee5d3f4-628f-4234-bddf-616ca58ad5b2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="053f4d64-5894-4c71-b920-c937d12de2db"
+                  name="seedNode"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b75a449b-73a6-4ab6-ba7f-ea956e173b63"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateMap OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]) ParamKind%3DRef)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32) ParamKind%3DRef)]) ParameterIdentifier%3DseedNode"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d3f51bf3-e286-4a14-8991-3815222bd3ff"
+                      LastKnownName="ChordNode"
+                      LastKnownLocation="Package1_1548.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db532f45-880f-460c-9511-c7ed79b731bd"
+                  name="nodeList"
+                  direction="Out">
+                  <referencesInternal>
+                    <reference
+                      Id="26e69f63-1e21-4919-b12d-d9a4234e1df0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateMap OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]) ParamKind%3DRef)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32) ParamKind%3DRef)]) ParameterIdentifier%3DnodeList"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc155c0b-00e0-48d2-9f39-8e3727160e16"
+                      LastKnownName="List&lt;ChordNode‎&gt;"
+                      LastKnownLocation="Package4_1548.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="82041149-7005-48fd-9aa6-97920d9a3194"
+                  name="hopcountMap"
+                  direction="Out"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="39d15624-9492-48dc-9d0b-a013c6bb3481"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateMap OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]) ParamKind%3DRef)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32) ParamKind%3DRef)]) ParameterIdentifier%3DhopcountMap"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7749efab-309c-4cc9-be0b-77665df1f4e0"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5ba01b39-f608-4138-b454-c0c3f3d196c4"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="98f157c3-d9ec-436a-8410-3de45239670c"
+            name="GenerateCsv"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4f07249f-d651-430c-acba-75608dba5d66"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateCsv OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="7ce0311a-172c-42d2-b25f-455617137bc8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ba79acbe-84c7-4eab-b4a5-65800c2968c9">
+                    <propertyInstance
+                      Id="5cd92a1f-75ba-4482-bf8c-05ffea50c0b5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2b82a89f-2d36-495e-b3c1-05b97dc43736">
+                    <propertyInstance
+                      Id="ed6d744a-c4ab-4141-b905-bc3f2f1ed519"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11e390ff-8cea-4cd2-bc08-e532e8bac5cb">
+                    <propertyInstance
+                      Id="396b86db-e2ff-4e79-bab9-181427b42c29"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2bb07b52-bee9-4358-a335-be1655602cd1">
+                    <propertyInstance
+                      Id="ccdc1122-abb7-4f19-967e-e0212246cd7d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="df7ef566-e3f9-4691-beb9-4ed6493cdbc2">
+                    <propertyInstance
+                      Id="5772ec96-52ca-4b5c-8230-bb8c96283d32"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="035058fb-5af2-4e6d-807a-4596bffe856e">
+                    <propertyInstance
+                      Id="7c30f889-9f25-4240-a145-5eb25961a336"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e06e6d3f-84b3-49ec-87e0-fe0e7442efd7"
+                  name="hopcountMap"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="099723d2-3f4b-4d71-9752-f0d2602e458d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateCsv OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DhopcountMap"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="18f20455-aef1-4338-8398-791dd9f9d2a8"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f4618345-14c0-411b-9230-8bc7b60efa3c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f4afb91e-5d39-4eae-9958-50dfbe7a64d5"
+                  name="nodeList"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="57eec5ee-d94b-4e24-9bd2-a69fbdaa8028"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateCsv OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DnodeList"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc155c0b-00e0-48d2-9f39-8e3727160e16"
+                      LastKnownName="List&lt;ChordNode‎&gt;"
+                      LastKnownLocation="Package4_1548.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="72b81ed4-9631-49cc-87d4-bfcf4c6c4b5d"
+                  name="outputFilename"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8ed3e728-6cf8-4eea-b5d2-99de97cbae6d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateCsv OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DoutputFilename"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f548ed04-9ff4-4711-b241-f0e761f86418"
+            name="GenerateImage"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="85ccdc2a-28da-4f21-a7f8-214ad7d5cae6"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateImage OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d0bbf1b4-10c1-4e9f-8844-23f406cca71e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d46eb0c-ca44-4829-a738-82d79c353dbb">
+                    <propertyInstance
+                      Id="36947664-901f-47f1-bfaf-6fdb79f4538b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8e73609-ed26-4a01-a841-de60f9be71b2">
+                    <propertyInstance
+                      Id="75c94502-78ce-458b-8a2c-41ec5eab5af5"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e7c13eb-55ff-41e9-933a-abe500590480">
+                    <propertyInstance
+                      Id="34b9f59b-5f25-4b67-9531-e22d9489fcbd"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="667f957b-5ce4-45a2-97b0-5dc9f586677a">
+                    <propertyInstance
+                      Id="15e610a8-f944-4473-ae3e-56c73cc71e96"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8a9d138e-d7d2-48a5-b4ee-8a1a76028bd3">
+                    <propertyInstance
+                      Id="fafc057f-0a4a-4e53-a8e5-e462bb045311"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cf1da18-daca-4126-9ae7-94680afa76e9">
+                    <propertyInstance
+                      Id="fda23c26-10e0-4781-9e40-c7552b493798"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="808ffc2b-254e-43e0-b1e9-211685257056"
+                  name="hopcountMap"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="0d749624-9b3a-45cf-9f42-9f6f46dd5f00"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateImage OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DhopcountMap"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="16e63eff-0ae6-4b2a-9a71-3deae6cbb771"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c2fd0361-d099-4300-9591-8de5b10c3f2d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e5acca3-8751-4cba-8d33-838945e048ec"
+                  name="nodeList"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="31c096aa-4701-4496-bcc9-992fa7356d9a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateImage OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DnodeList"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="fc155c0b-00e0-48d2-9f39-8e3727160e16"
+                      LastKnownName="List&lt;ChordNode‎&gt;"
+                      LastKnownLocation="Package4_1548.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a86a4245-f16d-4bb8-8fe9-b9da5262c5b1"
+                  name="outputFileName"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d21fb238-f47e-42ce-8491-ea8cca362e8b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D(Name%3DGenerateImage OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3D(Name%3DInt32 ArrayRank%3D2 ParentType%3DInt32))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FNChordLib%2Fbin%2FDebug%2FNChordLib.dll Namespace%3DNChordLib Type%3DChordNode)]))%2C(Assembly%3Dfile:%2F%2F%2FC:%2FWindows%2FMicrosoft.NET%2FFramework%2Fv2.0.50727%2Fmscorlib.dll Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DoutputFileName"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ac3bbc02-5421-4bc3-bf47-9a86157d2c6b"
+            name="Program"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="723c9599-3c7a-4a8c-978b-65ff92b256e7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FNchord%2FChordTopoMapSample%2Fbin%2FDebug%2FChordTopoMapSample.exe Namespace%3DChordTopoMapSample Type%3DProgram Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="257501ff-1bfb-4d59-9b8f-17824d28507b"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6577d0c2-8bb9-46a6-9b4a-c6fb908a133b">
+                    <propertyInstance
+                      Id="371e887c-d029-4398-8db9-d9532e98a6b3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8baf2005-905e-4089-94d4-237de87ef4c8">
+                    <propertyInstance
+                      Id="c02d0a5f-2dc9-42be-aa85-afcd03958bf1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="718a447b-340c-46b8-a087-f71c47d749fd">
+                    <propertyInstance
+                      Id="786745bf-bbf3-4eb4-98b3-264f630a5208"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c39be7e6-7be1-4293-9a98-b74176dc3d4b">
+                    <propertyInstance
+                      Id="f245aacd-6bb4-49d3-8c0a-0f699e962510"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8495e233-421e-4806-aac9-336cede586b6">
+                    <propertyInstance
+                      Id="c4e7f2f9-91d7-49aa-80d0-e21333b23769"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="abd535f4-d840-48db-821b-b28d7749eef5">
+                    <propertyInstance
+                      Id="552da709-d86e-4305-984b-6f773db2ab38"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,9 @@
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\RafisDLL\bin\Debug\RafisDLL.dll.config
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\RafisDLL\bin\Debug\RafisDLL.dll
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\RafisDLL\bin\Debug\RafisDLL.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\RafisDLL.dll.config
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\RafisDLL.dll
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\RafisDLL.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\RafisDLL\obj\Debug\RafisDLL.csprojResolveAssemblyReference.cache
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\RafisDLL\obj\Debug\RafisDLL.dll
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\RafisDLL\obj\Debug\RafisDLL.pdb

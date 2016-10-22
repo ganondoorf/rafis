@@ -1,0 +1,12 @@
+C:\Nchord\NChordLib\bin\Debug\NChordLib.dll
+C:\Nchord\NChordLib\bin\Debug\NChordLib.pdb
+C:\Nchord\NChordLib\obj\Debug\NChordLib.dll
+C:\Nchord\NChordLib\obj\Debug\NChordLib.pdb
+C:\Nchord\NChordLib\obj\Debug\NChordLib.csprojResolveAssemblyReference.cache
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\bin\Debug\NChordLib.dll
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\bin\Debug\NChordLib.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Nchord\NChordLib.dll
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Nchord\NChordLib.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\obj\Debug\NChordLib.dll
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\obj\Debug\NChordLib.pdb
+C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\obj\Debug\NChordLib.csprojResolveAssemblyReference.cache
