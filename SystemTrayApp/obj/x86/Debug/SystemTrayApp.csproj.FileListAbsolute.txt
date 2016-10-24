@@ -19,3 +19,6 @@ C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\S
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\obj\x86\Debug\SystemTrayApp.TrustInfo.xml
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\obj\x86\Debug\SystemTrayApp.exe.manifest
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\obj\x86\Debug\SystemTrayApp.application
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\SystemTrayApp.exe.config
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\obj\x86\Debug\SystemTrayApp.exe
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\obj\x86\Debug\SystemTrayApp.pdb

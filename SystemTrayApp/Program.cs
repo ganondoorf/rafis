@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Reflection;
-using System.Security.Principal;
 using System.Windows.Forms;
 
 namespace SystemTrayApp
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	static class Program
+    /// <summary>
+    /// 
+    /// </summary>
+    static class Program
 	{
 		/// <summary>
 		/// The main entry point for the application.

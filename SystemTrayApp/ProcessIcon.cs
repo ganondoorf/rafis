@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Diagnostics;
-using System.IO;
 using System.Windows.Forms;
 using SystemTrayApp.Properties;
 
 namespace SystemTrayApp
 {
-	/// <summary>
-	/// 
-	/// </summary>
-	class ProcessIcon : IDisposable
+    /// <summary>
+    /// 
+    /// </summary>
+    class ProcessIcon : IDisposable
 	{
 		/// <summary>
 		/// The NotifyIcon object.

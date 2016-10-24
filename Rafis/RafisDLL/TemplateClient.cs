@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Net.Sockets;
-using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
-
-using RafisDLL;
 
 namespace RafisDLL
 {

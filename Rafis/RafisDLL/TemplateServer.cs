@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Net.Sockets;
-using System.IO;
 using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
-using NChordLib;
-using RafisDLL;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 

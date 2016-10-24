@@ -1,22 +1,17 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 using SystemTrayApp.Properties;
-using System.Drawing;
-using System.ServiceProcess;
-using System.ComponentModel;
 using System.IO;
-using System.Security.Principal;
 using Microsoft.Build.Utilities;
 using RafisDLL;
 
 namespace SystemTrayApp
 {
-	/// <summary>
-	/// Aplicativo auxiliar para monitoramento e controle do processo Rafis Core
-	/// </summary>
-	/// 
-	class ContextMenus
+    /// <summary>
+    /// Aplicativo auxiliar para monitoramento e controle do processo Rafis Core
+    /// </summary>
+    /// 
+    class ContextMenus
 	{
 		
 
