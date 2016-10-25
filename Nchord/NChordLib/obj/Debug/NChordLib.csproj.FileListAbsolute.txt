@@ -10,3 +10,8 @@ C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\N
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\obj\Debug\NChordLib.dll
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\obj\Debug\NChordLib.pdb
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordLib\obj\Debug\NChordLib.csprojResolveAssemblyReference.cache
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.dll
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.pdb
+C:\Users\011906932364\Projetos\rafis\Nchord\NChordLib\obj\Debug\NChordLib.csprojResolveAssemblyReference.cache
+C:\Users\011906932364\Projetos\rafis\Nchord\NChordLib\obj\Debug\NChordLib.dll
+C:\Users\011906932364\Projetos\rafis\Nchord\NChordLib\obj\Debug\NChordLib.pdb

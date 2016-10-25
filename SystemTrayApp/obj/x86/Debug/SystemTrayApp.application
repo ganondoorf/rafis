@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SystemTrayApp.exe.manifest" size="9694">
+    <dependentAssembly dependencyType="install" codebase="SystemTrayApp.exe.manifest" size="10322">
       <assemblyIdentity name="SystemTrayApp.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aQ4DZTIqDuMvHJWP4DAgzjrHgBb4nFda0fIK6xHh3Vc=</dsig:DigestValue>
+        <dsig:DigestValue>cT4OKjfJH+lZOFdJ9a64v2JRM2LjZDDEZTHK/PALe9E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

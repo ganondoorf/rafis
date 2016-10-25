@@ -23,3 +23,16 @@ C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\obj\Debug\Raf
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\NChordLib.dll
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\SourceAFIS.dll
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Rafis\Rafis\bin\Debug\NChordLib.pdb
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.csprojResolveAssemblyReference.cache
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.ProjectInstaller.resources
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.csproj.GenerateResource.Cache
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.exe
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.pdb
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.TrustInfo.xml
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Rafis.exe.config
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Rafis.exe.manifest
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Rafis.application
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Rafis.exe
+C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Rafis.pdb
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.exe.manifest
+C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.application

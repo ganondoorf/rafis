@@ -51,16 +51,16 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>21DF1BADCFFBBDEC6A5AA974D3A978A4971C438E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>39CB588559B8FBC7AD9748AA16A02C0491857E54</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Rafis_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Rafis_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>

@@ -54,38 +54,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NChordLib.dll" size="21504">
-      <assemblyIdentity name="NChordLib" version="1.0.0.28933" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NChordLib.dll" size="20480">
+      <assemblyIdentity name="NChordLib" version="0.0.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RGV1EQoGNiCCVe5a60Gsw68bqoaF2YuqXa636rva7ks=</dsig:DigestValue>
+        <dsig:DigestValue>0mNtQuyMLRIhBnwBbbK3UV4HAkhldnQdi/5B2F6LvpY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rafis.exe" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rafis.exe" size="16896">
       <assemblyIdentity name="Rafis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mxCmtn1XIBdHaj14R4juS8/kW5mFF3tluYcLxQpmeEU=</dsig:DigestValue>
+        <dsig:DigestValue>DYt/Y2v6V+Z9eLOxfsdY5Nj48fMm8i2ncSMgUpeD7BE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RafisDLL.dll" size="20480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RafisDLL.dll" size="19968">
       <assemblyIdentity name="RafisDLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>K2ra2iSLOYgSByvFhEUMN/+R/QLL8vYxsK7RpBG3vsk=</dsig:DigestValue>
+        <dsig:DigestValue>0vX+8UQmRmr0ke55bPzG3B56aOFDif+ISbc+hMlJbK4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
