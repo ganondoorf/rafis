@@ -34,35 +34,27 @@ namespace Rafis
         bool running = true;
         List<MyPerson> database = new List<MyPerson>();
                 
-
         #region Inicia o núcleo Rafis
         public void load()
         {
             AfisEngine Afis = new AfisEngine();
             Afis.Threshold = 5;
-            
             // Base Offline
             List<int> candidates = new List<int>();
-
-             MyPerson probe = new MyPerson();
-             Fingerprint fp01 = new Fingerprint();
-
-             //Carrega lista de templates do Banco de Dados 
-             selectListTemplates();
-             Utilities.log("["+DateTime.Now.ToString() + "]"+" Comparando impressões...", "//RafisCore.log");
+            MyPerson probe = new MyPerson();
+            Fingerprint fp01 = new Fingerprint();
+            //Carrega lista de templates do Banco de Dados 
+            selectListTemplates();
+            Utilities.log("["+DateTime.Now.ToString() + "]"+" Comparando impressões...", "//RafisCore.log");
             while (running)
             {
-               
                 try
                 {
-                    
                     //Utilities.log("Banco: "+Properties.Settings.Default.Banco+"\n");
                     MySqlConnection conn = new MySqlConnection(ConOrigem);
                     MySqlConnection conn2 = new MySqlConnection(ConOrigem);
                     MySqlCommand command = new MySqlCommand("SELECT * from filaid where resultado is null ORDER by custo ASC;", conn);
-                   
                     conn.Open();
-                    
                     MySqlDataReader dr = command.ExecuteReader();
                     while (dr.Read())
                     {
@@ -70,25 +62,19 @@ namespace Rafis
                         fp01.AsIsoTemplate = (byte[])dr["Template"];
                         probe.Fingerprints.Add(fp01);
                         probe.itemId = (int)dr["ItemID"];
-
                         MyPerson match = Afis.Identify(probe, database).FirstOrDefault() as MyPerson;
                         float score = Afis.Verify(probe, match);
                         probe.Fingerprints.Clear();
-
                         Utilities.log("["+DateTime.Now.ToString()+"] Template compatível encontrado: CPF "+match.cpf+" com score "+score,"//RafisCore.log");
-
                         conn2.Open();
                         MySqlCommand command_update = new MySqlCommand("UPDATE `afis`.`filaid` SET `resultado`='4', `score`='"+score+"' WHERE `itemID`='" + probe.itemId +"';", conn2);
                         command_update.ExecuteNonQuery();
                         conn2.Close();
-
-
                         if (match == null)
                         {
                             Utilities.log("[" + DateTime.Now.ToString() + "] " + "Sem templates compatíveis.", "//RafisCore.log");
                             continue;
                         }
-                        
                     }
                     dr.Close();
                     conn.Close();
@@ -97,10 +83,8 @@ namespace Rafis
                 {
                     Utilities.log("[" + DateTime.Now.ToString() + "] " + "RafisCore: Erro ao acessar o banco afis " + ex);
                 }
-                
                 //sendTemplates();
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Rodando...");
-
                 System.Threading.Thread.Sleep(1000);
             }
             Utilities.log("Encerrando: " + DateTime.Now.ToString());
@@ -113,44 +97,35 @@ namespace Rafis
         #endregion
 
         #region Conecta no Banco e seleciona a base de Templates -->
-
         public void selectListTemplates()
         {
             if (true)//!File.Exists("database.dat")
             {
-                 
                 int totalRows;
                 MySqlConnection conn_row;
                 //Lista o número de templates -->
-                
                 using (conn_row = new MySqlConnection(ConOrigem))
                 {
                     string sSQL = "SELECT COUNT(*) FROM template";
                     MySqlCommand myCommand = new MySqlCommand(sSQL, conn_row);
                     conn_row.Open();
                     totalRows = Convert.ToInt32(myCommand.ExecuteScalar());
-
                     conn_row.Close();
                 }
 
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando " + totalRows + " templates existentes...", "//RafisCore.log");
-                
-                //recupera -->
+               
                 try
                 {
                     using (MySqlConnection conn = new MySqlConnection(ConOrigem))
                     {
-
                         using (MySqlCommand command = new MySqlCommand("Select * from template_view;", conn))
                         {
                             conn.Open();
-                            //List<template> listaTemplates = new List<template>()                
-
                             using (MySqlDataReader dr = command.ExecuteReader())
                             {
                                 while (dr.Read())
                                 {
-                                  
                                     int item_id = (int)dr["itemID"];
                                     int person_id = (int)dr["personID"];
 
@@ -161,7 +136,6 @@ namespace Rafis
                                     database.Add(Enroll(item_id, person_id, template_byte, caminho, cpf));
                                     Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item_id + "...", "//RafisCore.log");
                                 }
-
                             }
                         }
                     }
@@ -170,13 +144,13 @@ namespace Rafis
                 {
                     throw new Exception("[" + DateTime.Now.ToString() + "] " + "Erro ao acessar o banco de Templates " + ex.Message);
                 }
-
-                // Salva os dados da base no disco via serializacao
                 BinaryFormatter formatter = new BinaryFormatter();
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Salvando arquivo stream...", "//RafisCore.log");
 
                 using (Stream stream = File.Open("database.dat", FileMode.Create))
+                {
                     formatter.Serialize(stream, database);
+                }
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Stream cache salvo.", "//RafisCore.log");
             }
         }

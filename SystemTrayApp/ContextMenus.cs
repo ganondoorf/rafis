@@ -13,8 +13,6 @@ namespace SystemTrayApp
     /// 
     class ContextMenus
 	{
-		
-
 		/// <summary>
 		/// About box está ativa
         /// 

@@ -93,15 +93,12 @@ namespace Rafis
 
         public string retornaNo(string cpf) 
         {
-
             ChordInstance instance = ChordServer.GetInstance(ChordServer.LocalNode);
             ulong id = ChordServer.GetHash(cpf);
-
-                return instance.FindHost(id);
-            
+            return instance.FindHost(id);
         }
 
-        #region envia templates
+        #region Envia templates
         private void sendTemplates() 
         {
             try
@@ -110,39 +107,30 @@ namespace Rafis
                 MySqlConnection conn = new MySqlConnection(ConOrigem);
                 MySqlConnection conn2 = new MySqlConnection(ConOrigem);
                 MySqlCommand command_select = new MySqlCommand("select * from ver_template WHERE resultado is null order by itemID asc;", conn);
-                
                 conn.Open();
                 conn2.Open();
-          
                 TemplateShare templateSend = new TemplateShare();
-
-                //List<template> listaTemplates = new List<template>()                
                 MySqlDataReader dr = command_select.ExecuteReader();
+
                 while (dr.Read())
                 {
-                    
-                    string no_destino = retornaNo(dr["CPF"].ToString());
-
-                    templateSend.opId = Convert.ToInt32(dr["ItemID"]);
-                    templateSend.no_origem = fqdn;
-                   // templateSend.no_destino = no_destino;
+                   string no_destino = retornaNo(dr["CPF"].ToString());
+                   templateSend.opId = Convert.ToInt32(dr["ItemID"]);
+                   templateSend.no_origem = fqdn;
                    templateSend.operacao = Convert.ToInt32(dr["op"]);
                    templateSend.template = (byte[])dr["template"];
                    templateSend.template_iso = (byte[])dr["isoTemplate"];
                    templateSend.cpf = (string)dr["CPF"];
                    templateSend.id_dedo = (string)dr["dedoID"];
                    templateSend.node_dbsize = DBsize;
-                    //templateSend.
-                    
-                    MySqlCommand command_update = new MySqlCommand("UPDATE `afis`.`ver_template` SET `no_destino`='"+no_destino+"', `resultado`=0 WHERE `itemID`='"+dr["itemID"].ToString()+"';", conn2);
-                    command_update.ExecuteNonQuery();
 
-                    TemplateClient sender = new TemplateClient();
-                    string[] connect = no_destino.Split(':');
-                    sender.SendToServer(templateSend,connect[0], Int32.Parse(connect[1]));
-                    MySqlCommand two = new MySqlCommand("UPDATE `afis`.`ver_template` SET `resultado`=1 WHERE `itemID`='" + dr["itemID"].ToString() + "';", conn2);
-                    two.ExecuteNonQuery();
-
+                   MySqlCommand command_update = new MySqlCommand("UPDATE `afis`.`ver_template` SET `no_destino`='"+no_destino+"', `resultado`=0 WHERE `itemID`='"+dr["itemID"].ToString()+"';", conn2);
+                   command_update.ExecuteNonQuery();
+                   TemplateClient sender = new TemplateClient();
+                   string[] connect = no_destino.Split(':');
+                   sender.SendToServer(templateSend,connect[0], Int32.Parse(connect[1]));
+                   MySqlCommand two = new MySqlCommand("UPDATE `afis`.`ver_template` SET `resultado`=1 WHERE `itemID`='" + dr["itemID"].ToString() + "';", conn2);
+                   two.ExecuteNonQuery();
                 }
                 conn2.Close(); 
                 dr.Close();
@@ -158,7 +146,7 @@ namespace Rafis
 
         public static void getConf(Properties.Settings tmp)
         {
-        
+            throw new NotImplementedException();
         }
 
     }

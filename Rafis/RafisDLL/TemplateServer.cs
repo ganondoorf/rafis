@@ -15,11 +15,9 @@ namespace RafisDLL
 
         public void load(IPAddress endereco, int port)
         {
-            
             try
             {
                 Byte[] bytes = new Byte[32];
-                //server = new TcpListener(IPAddress.Parse(endereco), port);
                 server = new TcpListener(endereco, port);
                 MySqlConnection conn = new MySqlConnection(ConOrigem);
                 MySqlConnection conn2 = new MySqlConnection(ConOrigem);
@@ -29,25 +27,19 @@ namespace RafisDLL
 
                 while (true)
                 {
-                    //Console.WriteLine("Waiting for a connection (ctrl+c to exit)...");
-                    
-                    
                     TcpClient client = server.AcceptTcpClient();
                     NetworkStream stream = client.GetStream();
                     string ip = client.Client.AddressFamily.ToString();
                     TemplateShare testObj = (TemplateShare)fmtr.Deserialize(stream);
 
-                    //Console.WriteLine("received test object field1=" + testObj.field1 + ", field2=" + testObj.field2);
                     RafisDLL.Utilities.log("[" + DateTime.Now.ToString() + "] " + "Template " + testObj.cpf + " recebido com sucesso: " + testObj.opId + ", " + testObj.no_origem + ", " + testObj.operacao + ", " + testObj.id_dedo, "//TemplateServer.log");
 
                     MySqlCommand Commanddestino = new MySqlCommand();
                     MySqlCommand InsertNodes = new MySqlCommand();
-                    //MySqlCommand Commanddestino_xml = new MySqlCommand();
 
                     Commanddestino.Connection = conn;
                     InsertNodes.Connection = conn;
 
-                    //Commanddestino_xml.Connection = Conexaodestino;
                     int result = 0;
                     using (MySqlCommand cmd = new MySqlCommand())
                     {
@@ -64,18 +56,13 @@ namespace RafisDLL
 
                             Utilities.log("[" + DateTime.Now.ToString() + "] " + "Erro na inserção do template recebido: " + e);
                         } 
-                        ////result will be 1 if it exists, and 0 if it does not..
-                        conn.Close();
+                       conn.Close();
                     }
-
 
                     Commanddestino.CommandText = "INSERT INTO `afis`.`filaid` (`ItemId`, `CPF`, `Template`, `no_orig`) VALUES ('" + testObj.opId + "', '" + testObj.cpf + "', @isoTemplatePar, '" + testObj.no_origem + "');";
                     InsertNodes.CommandText = "INSERT INTO `afis`.`ranking_node` (`Name`, `DispNode`, `ReqNode`, `RespNode`, `NumPront`) VALUES ('" + testObj.no_origem + "', 0, 0, 0, '" + testObj.node_dbsize + "');";
-                    
                     MySqlParameter iso_Template = new MySqlParameter("@isoTemplatePar", MySqlDbType.VarBinary);
-
                     iso_Template.Value =  testObj.template_iso;
-
                     Commanddestino.Parameters.Add(iso_Template);
 
                     conn.Open();
@@ -97,33 +84,25 @@ namespace RafisDLL
                     conn.Close();
                     stream.Close();
                     client.Close();
-
-                    //
                 }
             }
             finally
-            {
-                // Stop listening for new clients.  
+            { 
                 server.Stop();
             }
         }
 
-        public void stop() {
+        public void stop()
+        {
             server.Stop();
         }
 
-        #region Envia o resultado ao nó solicitante
+        #region Envia o resultado ao nó solicitante - REFAZER!
         public void sendReturn()
         {
-        
-            
+            throw new NotImplementedException();
         }
-
         #endregion
-
-
-
-
-
+        
     }
 }

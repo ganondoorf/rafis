@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using System.Configuration;
 using MySql.Data.MySqlClient;
 using SourceAFIS.Simple;
-using NChordLib;
 namespace SystemTrayApp
 {
     public partial class TelaPrincipal : Form
     {
-        
         string dedo = "";
         string ip = Properties.Settings.Default.IP;
         string porta = Properties.Settings.Default.Porta.ToString();
@@ -27,7 +18,6 @@ namespace SystemTrayApp
 
         public TelaPrincipal()
         {
-            
             InitializeComponent();
         }
 
@@ -42,7 +32,7 @@ namespace SystemTrayApp
             openFileDialog1.DefaultExt = ".jpg";
             openFileDialog1.Title = "Selecione a imagem a ser enviada.";
             openFileDialog1.FileName = "";
-            openFileDialog1.ShowDialog();//abre janela para seleção da imagem
+            openFileDialog1.ShowDialog(); //abre janela para seleção da imagem
 
             textBox1.Text = openFileDialog1.FileName;
         }
@@ -70,7 +60,6 @@ namespace SystemTrayApp
             dedo = "";
             maskedTextBox1.Enabled = true;
             comboBox1.Enabled = false;
-            //Properties.Settings.Default.Estado;
             button3.Enabled = true;
             button4.Enabled = true;
             button5.Enabled = true;
@@ -251,8 +240,6 @@ namespace SystemTrayApp
         #region Carrega DataGridViews
         public void loadGridResult(DataGridView dataGridView, string sql, bool consulta)
         {
-            
-
             try
             {
                 using ( MySqlConnection conn = new MySqlConnection("Server=" + ip + ";Port=" + porta + ";Database=" + banco + ";Uid=" + login + ";Pwd=" + senha +";"))
@@ -260,24 +247,20 @@ namespace SystemTrayApp
                     using (MySqlCommand command = new MySqlCommand(sql, conn))
                     {
                         conn.Open();
-                        //List<template> listaTemplates = new List<template>()                
                         using (MySqlDataReader dr = command.ExecuteReader())
                         {
                             dataGridView.Rows.Clear();
                             int count = 0;
                             while (dr.Read())
                             {
-                                //int teste = (int)dr["PersonID"];
                                 if (consulta)
                                 {
                                     dataGridView.Rows.Insert(count, new Object[] { dr["itemID"], dr["op"], dr["CPF"].ToString(), dr["dedoID"], dr["isoTemplate"].ToString(), dr["no_destino"], dr["resultado"], dr["score"] });
-                                    //dataGridView1.Rows.Insert(count, new Object[] { (int)dr["id"], "*****", "*****", score[count], itens[count] });
                                 }
                                 else
                                 {
                                     dataGridView.Rows.Insert(count, new Object[] { dr["Ordem"], dr["ItemId"], dr["Template"].ToString(), dr["CPF"].ToString(), dr["resultado"], dr["Score"], dr["no_orig"].ToString(), dr["custo"] });
                                 }
-                                
                                 count++;
                             }
                         }
@@ -303,8 +286,6 @@ namespace SystemTrayApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-
             if (textBox1.Text!="")
             {
                 Fingerprint fp01 = RafisDLL.RafisTools.ConverteTemplate(textBox1.Text);
@@ -321,8 +302,6 @@ namespace SystemTrayApp
 	            }      
                 templateObj.template = fp01.Template;
                 templateObj.template_iso = fp01.AsIsoTemplate;
-                
-
                 RafisDLL.TemplateClient cliente = new RafisDLL.TemplateClient();
                 try
                 {
@@ -334,16 +313,13 @@ namespace SystemTrayApp
                     throw;
                 }
                 
-
                 try
                 {
                 insereTransfer(maskedTextBox1.Text, dedo, fp01.Template, fp01.AsIsoTemplate, fp01.AsXmlTemplate.ToString(), templateObj.no_destino, templateObj.operacao);
-                
                 }
                 catch (Exception f)
                 {
                     MessageBox.Show(f.ToString());
-                    
                 }
                 maskedTextBox1.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
             }
@@ -353,6 +329,7 @@ namespace SystemTrayApp
             }
         }
 
+        #region Refresh na Tela
         private void refresh()
         {
             try
@@ -369,18 +346,16 @@ namespace SystemTrayApp
             catch (Exception)
             {
                 toolStripStatusLabel1.Text = "Serviço Rafis não instalado.";
-                
             }
-            
             loadGridResult(dataGridView1, "SELECT * FROM afis.ver_template;",true);
             loadGridResult(dataGridView2, "SELECT * FROM afis.filaid;",false);
             comboBox1.DataSource = new[] { "Todos", "MT.rafis.net", "RJ.rafis.net", "RO.rafis.net", "RR.rafis.net" };
         }
+        #endregion
 
         #region Insere Templates nas tabelas de transferência
         public void insereTransfer(string cpf, string dedoID, byte[] template, byte[] isoTemplate, string xmlTemplate, string destino, int op)
         {
-            
             //configura conexoes
             MySqlConnection Conexaodestino = new MySqlConnection("Server=" + ip + ";Port=" + porta + ";Database=" + banco + ";Uid=" + login + ";Pwd=" + senha +";");
             try
@@ -392,16 +367,8 @@ namespace SystemTrayApp
                 throw;
             }
             MySqlCommand Commanddestino = new MySqlCommand();
-            //MySqlCommand Commanddestino_xml = new MySqlCommand();
-
             Commanddestino.Connection = Conexaodestino;
-            //Commanddestino_xml.Connection = Conexaodestino;
-           
-
             Commanddestino.CommandText = "insert into ver_template (CPF, no_destino, template, isoTemplate, Template_xml, dedoID, op) values (@cpf,@destinoPar,@templatePar,@isoTemplatePar,@templateXml, @dedoIDPar, "+ op  +");";
-            //Commanddestino.CommandText = "insert into ver_template (CPF, no_destino, Template_xml) values (524,'DF','dadas');";
-            //Commanddestino_xml.CommandText = "insert into template_xml (ItemId, PersonId, Template_xml) values(@idPar, @pidPar, @templateXml)";
-
             MySqlParameter cpfPar = new MySqlParameter("@cpf", cpf);
             MySqlParameter destinoPar = new MySqlParameter("@destinoPar", destino);
             MySqlParameter templatePar = new MySqlParameter("@templatePar", MySqlDbType.VarBinary);
@@ -410,14 +377,12 @@ namespace SystemTrayApp
             MySqlParameter dedoIDPar = new MySqlParameter("@dedoIDPar", dedoID);
             templatePar.Value = template;
             iso_Template.Value = isoTemplate;
-
             Commanddestino.Parameters.Add(cpfPar);
             Commanddestino.Parameters.Add(destinoPar);
             Commanddestino.Parameters.Add(templatePar);
             Commanddestino.Parameters.Add(templateXml);
             Commanddestino.Parameters.Add(iso_Template);
             Commanddestino.Parameters.Add(dedoIDPar);
-
             try
             {
                 Commanddestino.ExecuteNonQuery();
@@ -433,20 +398,5 @@ namespace SystemTrayApp
             }
         }
         #endregion 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
-
-
-        
-
-        
 }

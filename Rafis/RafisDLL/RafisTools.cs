@@ -9,8 +9,6 @@ using SourceAFIS.Simple;
 
 namespace RafisDLL
 {
-
-
     public class RafisTools
     {
         //configura conexoes
@@ -185,7 +183,7 @@ namespace RafisDLL
         }
         #endregion
 
-        #region Insere Templates no Banco
+        #region Insere Templates no Banco --ok
         public static void inserenodestino(int id, int pid, byte[] template, string caminho, string asXml, byte[] isoTemplate)
         {
             MySqlConnection Conexaoorigem, Conexaodestino;
@@ -262,70 +260,8 @@ namespace RafisDLL
 
         }
         #endregion
-
-        #region Atualiza no Banco informação de último inserido
-        private void update_state(string ult_arq, string data)
-        {
-            string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
-            string ConDestino = ConfigurationManager.ConnectionStrings["ConexaoDestino"].ConnectionString;
-
-            //configura conexoes
-            Conexaoorigem = new MySqlConnection(ConOrigem);
-            Conexaodestino = new MySqlConnection(ConDestino);
-
-            //configura comandos sql
-            //string strcomando_origem = "Select item_id, item_data from biometria where item_type ='1'"; //;AND item_id%" + tbdividir.Text + "=" + tbresto.Text;
-
-            try
-            {
-                Conexaoorigem.Open();
-                Conexaodestino.Open();
-            }
-
-            catch (Exception)
-            {
-
-            }
-
-            MySqlCommand Commanddestino = new MySqlCommand();
-            //MySqlCommand Commanddestino_xml = new MySqlCommand();
-
-            Commanddestino.Connection = Conexaodestino;
-            //Commanddestino_xml.Connection = Conexaodestino;
-
-            Commanddestino.CommandText = "insert into file_state ( ultimo_arquivo, data_criacao) values(@ult_arq, @data)";
-            //Commanddestino_xml.CommandText = "insert into template_xml (ItemId, PersonId, Template_xml) values(@idPar, @pidPar, @templateXml)";
-
-            MySqlParameter ult_arqPar = new MySqlParameter("@ult_arq", ult_arq);
-            MySqlParameter dataPar = new MySqlParameter("@datar", data);
-
-            Commanddestino.Parameters.Add(ult_arqPar);
-            Commanddestino.Parameters.Add(dataPar);
-
-            try
-            {
-                Commanddestino.ExecuteNonQuery();
-            }
-
-            catch (Exception)
-            {
-                //
-            }
-
-            try
-            {
-                //Commanddestino_xml.ExecuteNonQuery(); //inserir na tabela de template_xml
-            }
-
-            catch (Exception)
-            {
-                //MessageBox.Show(eXCP.Message);
-            }
-
-        }
-        #endregion
-
-        #region Seleciona última entrada no banco e a data.
+        
+        #region Seleciona última entrada no banco e a data. --ok
         public static string loadState()
         {
 

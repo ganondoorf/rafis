@@ -255,6 +255,7 @@ namespace RafisDLL
         }
         #endregion
 
+        #region Métodos de operação
         /// <summary>
         /// Enumera os arquivos biométricos no diretório especificado. Inclui subdiretórios.
         /// </summary>
@@ -262,7 +263,6 @@ namespace RafisDLL
         /// <returns>Número de arquivos em string.S</returns>
         public static string numArquivos(string raiz)
         {
-
             try
             {
                 var files = Directory.EnumerateFiles(raiz, "*.obj", SearchOption.AllDirectories);
@@ -278,7 +278,6 @@ namespace RafisDLL
                 log(PathEx.Message);
                 return null;
             }
-        
         }
 
         public static string lastModDate(string raiz) 
@@ -291,7 +290,6 @@ namespace RafisDLL
 
         public static string rangeDateFiles(string raiz)
         {
-
             var directory = new DirectoryInfo(raiz);
             DateTime from_date = DateTime.Now.AddMonths(-3);
             DateTime to_date = DateTime.Now;
@@ -314,8 +312,9 @@ namespace RafisDLL
             vWriter.WriteLine(msg);
             vWriter.Flush(); vWriter.Close();
         }
+        #endregion 
 
-        #region Método de execução update no MySQL
+        #region Método de execução update no MySQL --ok
         public static void MySQLCommand(string myExecuteQuery, MySqlConnection myConnection)
         {
             try
@@ -333,6 +332,7 @@ namespace RafisDLL
         }
         #endregion
 
+        #region Atualiza o custo 
         public static void updateCost()
         {
             try
@@ -370,18 +370,14 @@ namespace RafisDLL
                 Utilities.log("Utilities: Erro ao calcular o custo: " + ex);
             }
         }
+        #endregion
 
+        #region Calcula o custo
         private static double costCalc(int OC, int DN, int NQ, int NR, int NP)
         {
             double resultado = OC - ((double)DN / 2) - ((double)NR / 2) + ((double)NQ / 100) - (5 * (double)NP / 1000000);
             return resultado;
         }
-
-
-
-
-
-
-
+        #endregion
     }
 }

@@ -10,62 +10,54 @@ namespace SystemTrayApp
     class ProcessIcon : IDisposable
 	{
 		/// <summary>
-		/// The NotifyIcon object.
+		/// O Objeto NotifyIcon.
 		/// </summary>
 		NotifyIcon ni;
-
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ProcessIcon"/> class.
 		/// </summary>
 		public ProcessIcon()
 		{
-			// Instantiate the NotifyIcon object.
+			//Instancia objeto NotifyIcon
 			ni = new NotifyIcon();
 		}
-
 		/// <summary>
-		/// Displays the icon in the system tray.
+		/// Apresenta o icone no system tray.
 		/// </summary>
 		public void Display()
 		{
-			// Put the icon in the system tray and allow it react to mouse clicks.			
+			// Coloca o ícone no tray.			
 			ni.MouseClick += new MouseEventHandler(ni_MouseClick);
 			ni.Icon = Resources.lupa;
 			ni.Text = "Tray Monitor - Rafis Core";
 			ni.Visible = true;
-
-			// Attach a context menu.
+			// Anexa o menu contexto.
 			ni.ContextMenuStrip = new ContextMenus().Create();
 		}
-
 		/// <summary>
-		/// Releases unmanaged and - optionally - managed resources
+		/// Libera os recursos do tray.
 		/// </summary>
 		public void Dispose()
 		{
-			// When the application closes, this will remove the icon from the system tray immediately.
+			// Quando a aplicação fecha, remove o icone do tray.
 			ni.Dispose();
 		}
-
 		/// <summary>
-		/// Handles the MouseClick event of the ni control.
+		/// Manipula o evento do mouse no ni control.
 		/// </summary>
-		/// <param name="sender">The source of the event.</param>
-		/// <param name="e">The <see cref="System.Windows.Forms.MouseEventArgs"/> instance containing the event data.</param>
+		/// <param name="sender">fonte do evento.</param>
+		/// <param name="e">A <see cref="System.Windows.Forms.MouseEventArgs"/> instância contendo os dados do evento.</param>
         bool isSettingsLoaded = false;
 		void ni_MouseClick(object sender, MouseEventArgs e)
 		{
-            
 			if (e.Button == MouseButtons.Left)
 			{
-				// Start Windows Explorer.
                 if (!isSettingsLoaded)
                 {
                     isSettingsLoaded = true;
                     new TelaPrincipal().ShowDialog();
                     isSettingsLoaded = false;
                 }
-                
 			}
 		}
 	}

@@ -8,10 +8,6 @@ namespace Rafis
 {
     public partial class Rafis : ServiceBase
     {
-         
-        //timer de log
-        //Timer timer1;
-        //Define path local
         static System.Reflection.Assembly ass = System.Reflection.Assembly.GetExecutingAssembly();
         static string fullProcessPath = ass.Location;
         string desiredDir = Path.GetDirectoryName(fullProcessPath);
@@ -19,7 +15,6 @@ namespace Rafis
         RafisLoad load = new RafisLoad();
         TemplateServer server = new TemplateServer();
         RafisCore rserver = new RafisCore();
-        
         
         private ManualResetEvent _shutdownEvent = new ManualResetEvent(false);
         private Thread _thread, _thread2, _thread3;
@@ -35,8 +30,7 @@ namespace Rafis
                 localPort = args[0];
                 ip = args[1];
                 seedPort = args[2];
-                //Utilities.log("Iniciando Nchord: "+localPort+ip+seedPort);
-                //timer1 = new Timer(new TimerCallback(timer1_Tick), null, 15000, 60000);
+
                 _thread = new Thread(ThreadNChord);
                 _thread.Name = "Rafis Rchord Thread";
                 _thread.IsBackground = true;
@@ -63,7 +57,6 @@ namespace Rafis
                 StreamWriter vWriter = new StreamWriter(desiredDir + "\\Rafis.log", true);
                 vWriter.WriteLine("Servico Parado: " + DateTime.Now.ToString()); vWriter.Flush(); vWriter.Close();
             }
-
             //temporizador de log...
             private void timer1_Tick(object sender)
             {
@@ -74,28 +67,22 @@ namespace Rafis
             private void ThreadNChord()
             {
                 load.load(Int32.Parse(localPort), ip, Int32.Parse(seedPort));
-                //Utilities.log(Int32.Parse(localPort)+ ip +  Int32.Parse(seedPort))
-                //load.load(10000,"",0);
             }
             private void ThreadTransfer()
             {
                 var hostname = System.Net.Dns.GetHostEntry("LocalHost").HostName;
                 System.Net.IPAddress iplocal = GetIPAddress(hostname);
-                //inicia servidor de template..
                 server.load(iplocal,777);
             }
             private void ThreadCore()
             {
                 rserver.load();
-            
             }
-
             //método para retornar ip local
             public static System.Net.IPAddress GetIPAddress(string hostName)
             {
                 System.Net.NetworkInformation.Ping ping = new System.Net.NetworkInformation.Ping();
                 var replay = ping.Send(hostName);
-
                 if (replay.Status == System.Net.NetworkInformation.IPStatus.Success)
                 {
                     return replay.Address;
