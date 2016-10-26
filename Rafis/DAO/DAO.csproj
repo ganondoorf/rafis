@@ -47,7 +47,7 @@
   <ItemGroup>
     <Compile Include="ConnectDB.cs" />
     <Compile Include="IfilaidDAO.cs" />
-    <Compile Include="MySQLCommand.cs" />
+    <Compile Include="CoMysql.cs" />
     <Compile Include="Filaid.cs" />
     <Compile Include="FilaidDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
@@ -7,6 +8,7 @@ using SourceAFIS.Simple;
 using RafisDLL;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using DAO;
 namespace Rafis
 {
     public class RafisCore
@@ -46,60 +48,54 @@ namespace Rafis
             //Carrega lista de templates do Banco de Dados 
             selectListTemplates();
             Utilities.log("["+DateTime.Now.ToString() + "]"+" Comparando impressões...", "//RafisCore.log");
+
             while (running)
             {
                 try
                 {
-                    //Utilities.log("Banco: "+Properties.Settings.Default.Banco+"\n");
-                    MySqlConnection conn = new MySqlConnection(ConOrigem);
-                    MySqlConnection conn2 = new MySqlConnection(ConOrigem);
-                    MySqlCommand command = new MySqlCommand("SELECT * from filaid where resultado is null ORDER by custo ASC;", conn);
-                    conn.Open();
-                    MySqlDataReader dr = command.ExecuteReader();
-                    while (dr.Read())
+                    DAO.FilaidDAO filaid = new FilaidDAO();
+                    DataTable itens = filaid.ConsultarResult();
+                    foreach (DataRow item in itens.Rows)
                     {
-                        //instance.AddKey(dr["CPF"].ToString(), estado);
-                        fp01.AsIsoTemplate = (byte[])dr["Template"];
+                        fp01.AsIsoTemplate = (byte[])item["Template"];
                         probe.Fingerprints.Add(fp01);
-                        probe.itemId = (int)dr["ItemID"];
+                        probe.itemId = (int)item["ItemID"];
                         MyPerson match = Afis.Identify(probe, database).FirstOrDefault() as MyPerson;
                         float score = Afis.Verify(probe, match);
                         probe.Fingerprints.Clear();
-                        Utilities.log("["+DateTime.Now.ToString()+"] Template compatível encontrado: CPF "+match.cpf+" com score "+score,"//RafisCore.log");
-                        conn2.Open();
-                        MySqlCommand command_update = new MySqlCommand("UPDATE `afis`.`filaid` SET `resultado`='4', `score`='"+score+"' WHERE `itemID`='" + probe.itemId +"';", conn2);
-                        command_update.ExecuteNonQuery();
-                        conn2.Close();
+                        CoMysql.UpdateResultFilaid(probe.itemId.ToString(), score.ToString());
+
                         if (match == null)
                         {
                             Utilities.log("[" + DateTime.Now.ToString() + "] " + "Sem templates compatíveis.", "//RafisCore.log");
                             continue;
                         }
-                    }
-                    dr.Close();
-                    conn.Close();
+                        else
+                        {
+                            Utilities.log("[" + DateTime.Now.ToString() + "] Template compatível encontrado: CPF " + match.cpf + " com score " + score, "//RafisCore.log");
+                        }
+                    } 
                 }
                 catch (Exception ex)
                 {
                     Utilities.log("[" + DateTime.Now.ToString() + "] " + "RafisCore: Erro ao acessar o banco afis " + ex);
                 }
-                //sendTemplates();
+
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Rodando...");
                 System.Threading.Thread.Sleep(1000);
             }
             Utilities.log("Encerrando: " + DateTime.Now.ToString());
         }
-
-        public void close()
-        {
-            running = false;
-        }
+        //public void close()
+        //{
+        //    running = false;
+        //}
         #endregion
 
         #region Conecta no Banco e seleciona a base de Templates -->
         public void selectListTemplates()
         {
-            if (true)//!File.Exists("database.dat")
+            if (true)//!File.Exists("database.dat") conrrigir
             {
                 int totalRows;
                 MySqlConnection conn_row;

@@ -2,10 +2,10 @@
 using System.Configuration;
 namespace DAO
 {
-    class MySQLCommand
+    public static class CoMysql
     {
-        #region Comando genérico do MySQL
         private static readonly string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
+        #region Comando genérico do MySQL
         public static void GenericCommand(string myExecuteQuery)
         {
            try
@@ -22,6 +22,24 @@ namespace DAO
             }
         }
         #endregion
+
+        public static void UpdateResultFilaid(string itemId, string score)
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(ConOrigem);
+                MySqlCommand myCommand = new MySqlCommand("UPDATE `afis`.`filaid` SET `resultado`='4', `score`='" + score + "' WHERE `itemID`='" + itemId + "';", con);
+                myCommand.Connection.Open();
+                myCommand.ExecuteNonQuery();
+                myCommand.Connection.Close();
+            }
+            catch (MySqlException ex)
+            {
+                throw (ex);
+            }
+        }
+        
+
 
         #region Insere Templates no Banco
         public static void inserenodestino(int id, int pid, byte[] template, string caminho, string asXml, byte[] isoTemplate)
@@ -81,7 +99,7 @@ namespace DAO
         #endregion
 
         #region Atualiza no Banco informação de último inserido
-        private void update_state(string ult_arq, string data)
+        public static void update_state(string ult_arq, string data)
         {
             MySqlConnection Conexaoorigem, Conexaodestino;
             string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
@@ -163,7 +181,6 @@ namespace DAO
             }
 
         }
-
         #endregion
     }
 }

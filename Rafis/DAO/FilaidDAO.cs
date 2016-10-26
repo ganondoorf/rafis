@@ -5,11 +5,11 @@ using MySql.Data.MySqlClient;
 
 namespace DAO
 {
-    public class PessoaDAO : IfilaidDAO<Filaid>
+    public class FilaidDAO : IfilaidDAO<Filaid>
     {
-        private static readonly PessoaDAO instancia = new PessoaDAO();
+        private static readonly FilaidDAO instancia = new FilaidDAO();
 
-        public static PessoaDAO GetInstance()
+        public static FilaidDAO GetInstance()
         {
             return instancia;
         }
@@ -25,9 +25,9 @@ namespace DAO
                         con.Open();
                         MySqlCommand cmd = new MySqlCommand("SELECT * from filaid where resultado='" + resultado +"' ORDER by custo ASC;", con);
                         MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                        DataTable cliente = new DataTable();
-                        da.Fill(cliente);
-                        return cliente;
+                        DataTable itens = new DataTable();
+                        da.Fill(itens);
+                        return itens;
                     }
                     catch (MySqlException ex)
                     {
@@ -52,9 +52,9 @@ namespace DAO
                         con.Open();
                         MySqlCommand cmd = new MySqlCommand("SELECT * from filaid where resultado is null ORDER by custo ASC;", con);
                         MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                        DataTable cliente = new DataTable();
-                        da.Fill(cliente);
-                        return cliente;
+                        DataTable itens = new DataTable();
+                        da.Fill(itens);
+                        return itens;
                     }
                     catch (MySqlException ex)
                     {
