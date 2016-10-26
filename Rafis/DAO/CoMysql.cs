@@ -1,16 +1,15 @@
 ﻿using MySql.Data.MySqlClient;
+using System;
 using System.Configuration;
 namespace DAO
 {
     public static class CoMysql
     {
-        private static readonly string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
-        #region Comando genérico do MySQL
         public static void GenericCommand(string myExecuteQuery)
         {
            try
             {
-                MySqlConnection con = new MySqlConnection(ConOrigem);
+                MySqlConnection con = ConnectDB.GetInstancia.GetConnection();
                 MySqlCommand myCommand = new MySqlCommand(myExecuteQuery, con);
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();
@@ -21,13 +20,12 @@ namespace DAO
                 throw (ex);
             }
         }
-        #endregion
 
         public static void UpdateResultFilaid(string itemId, string score)
         {
             try
             {
-                MySqlConnection con = new MySqlConnection(ConOrigem);
+                MySqlConnection con = ConnectDB.GetInstancia.GetConnection();
                 MySqlCommand myCommand = new MySqlCommand("UPDATE `afis`.`filaid` SET `resultado`='4', `score`='" + score + "' WHERE `itemID`='" + itemId + "';", con);
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();
@@ -39,8 +37,28 @@ namespace DAO
             }
         }
         
-
-
+        public static int CountTemplate()
+        {
+            try
+            {
+                MySqlConnection con;
+                int totalRows;
+                //Lista o número de templates -->
+                using (con = ConnectDB.GetInstancia.GetConnection())
+                {
+                    MySqlCommand myCommand = new MySqlCommand("SELECT COUNT(*) FROM template", con);
+                    con.Open();
+                    totalRows = Convert.ToInt32(myCommand.ExecuteScalar());
+                    con.Close();
+                    return totalRows;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                throw (ex);
+            }
+        }
+        
         #region Insere Templates no Banco
         public static void inserenodestino(int id, int pid, byte[] template, string caminho, string asXml, byte[] isoTemplate)
         {

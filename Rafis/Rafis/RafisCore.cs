@@ -97,20 +97,9 @@ namespace Rafis
         {
             if (true)//!File.Exists("database.dat") conrrigir
             {
-                int totalRows;
-                MySqlConnection conn_row;
-                //Lista o número de templates -->
-                using (conn_row = new MySqlConnection(ConOrigem))
-                {
-                    string sSQL = "SELECT COUNT(*) FROM template";
-                    MySqlCommand myCommand = new MySqlCommand(sSQL, conn_row);
-                    conn_row.Open();
-                    totalRows = Convert.ToInt32(myCommand.ExecuteScalar());
-                    conn_row.Close();
-                }
+                //registra o log com total de templates recuperados.
+                Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando " + CoMysql.CountTemplate().ToString() + " templates existentes...", "//RafisCore.log");
 
-                Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando " + totalRows + " templates existentes...", "//RafisCore.log");
-               
                 try
                 {
                     using (MySqlConnection conn = new MySqlConnection(ConOrigem))
