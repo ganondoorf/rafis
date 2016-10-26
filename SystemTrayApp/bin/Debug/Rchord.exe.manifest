@@ -43,13 +43,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NChordLib.dll" size="21504">
-      <assemblyIdentity name="NChordLib" version="1.0.0.28933" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="NChordLib" version="0.0.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XzKG9EzjAw0PuNZVjs4n7xY4pDY=</dsig:DigestValue>
+        <dsig:DigestValue>x61RBnJDrQNSv1K8LwvfNGwhCMo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7gKQR5DtefFTdMUXNLfQJQKuwwM=</dsig:DigestValue>
+        <dsig:DigestValue>U9To6xqK8h9y+pMof/MF8htuOYA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

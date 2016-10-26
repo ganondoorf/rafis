@@ -36,3 +36,16 @@ C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Rafis.exe
 C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Rafis.pdb
 C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.exe.manifest
 C:\Users\011906932364\Projetos\rafis\Rafis\Rafis\obj\Debug\Rafis.application
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rafis.exe.config
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rafis.exe.manifest
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rafis.application
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rafis.exe
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rafis.pdb
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.csprojResolveAssemblyReference.cache
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.ProjectInstaller.resources
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.csproj.GenerateResource.Cache
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.TrustInfo.xml
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.exe.manifest
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.application
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.exe
+Z:\Projetos\rafis\rafis\Rafis\Rafis\obj\Debug\Rafis.pdb

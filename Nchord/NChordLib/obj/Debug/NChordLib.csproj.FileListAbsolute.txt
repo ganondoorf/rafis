@@ -15,3 +15,7 @@ C:\Users\011906932364\Projetos\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.pd
 C:\Users\011906932364\Projetos\rafis\Nchord\NChordLib\obj\Debug\NChordLib.csprojResolveAssemblyReference.cache
 C:\Users\011906932364\Projetos\rafis\Nchord\NChordLib\obj\Debug\NChordLib.dll
 C:\Users\011906932364\Projetos\rafis\Nchord\NChordLib\obj\Debug\NChordLib.pdb
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.dll
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.pdb
+Z:\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.dll
+Z:\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.pdb

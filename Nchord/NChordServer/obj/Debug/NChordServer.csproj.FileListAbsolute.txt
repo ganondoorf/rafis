@@ -22,3 +22,14 @@ C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\D
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.application
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.exe
 C:\Users\Clayton\Documents\Visual Studio 2012\Projects\Nchord\NChordServer\obj\Debug\Rchord.pdb
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rchord.exe.config
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rchord.exe.manifest
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rchord.application
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rchord.exe
+Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Rchord.pdb
+Z:\Projetos\rafis\rafis\Nchord\NChordServer\obj\Debug\NChordServer.csprojResolveAssemblyReference.cache
+Z:\Projetos\rafis\rafis\Nchord\NChordServer\obj\Debug\Rchord.TrustInfo.xml
+Z:\Projetos\rafis\rafis\Nchord\NChordServer\obj\Debug\Rchord.exe.manifest
+Z:\Projetos\rafis\rafis\Nchord\NChordServer\obj\Debug\Rchord.application
+Z:\Projetos\rafis\rafis\Nchord\NChordServer\obj\Debug\Rchord.exe
+Z:\Projetos\rafis\rafis\Nchord\NChordServer\obj\Debug\Rchord.pdb

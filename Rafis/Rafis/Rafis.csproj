@@ -51,16 +51,16 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>39CB588559B8FBC7AD9748AA16A02C0491857E54</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>21DF1BADCFFBBDEC6A5AA974D3A978A4971C438E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Rafis_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>Rafis_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>false</SignManifests>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -71,11 +71,11 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\MySql.Data.dll</HintPath>
+      <HintPath>bin\Debug\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="SourceAFIS, Version=1.7.0.41358, Culture=neutral, PublicKeyToken=b195ffd29617dfb3, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SourceAFIS.dll</HintPath>
+      <HintPath>bin\Debug\SourceAFIS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

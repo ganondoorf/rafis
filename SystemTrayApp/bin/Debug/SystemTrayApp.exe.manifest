@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NChordLib.dll" size="20480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NChordLib.dll" size="21504">
       <assemblyIdentity name="NChordLib" version="0.0.1.1" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0mNtQuyMLRIhBnwBbbK3UV4HAkhldnQdi/5B2F6LvpY=</dsig:DigestValue>
+        <dsig:DigestValue>JDOhtlbprtBDiGa5yvgDyKJhiTZkBUyiZi4jdrDdfUo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,14 +78,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rafis.exe" size="16896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rafis.exe" size="17408">
       <assemblyIdentity name="Rafis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DYt/Y2v6V+Z9eLOxfsdY5Nj48fMm8i2ncSMgUpeD7BE=</dsig:DigestValue>
+        <dsig:DigestValue>0LF6VX2ddItY4wgdgX7v3LrFcXE5qpP6Q7+5/3NXjp8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,7 +97,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0vX+8UQmRmr0ke55bPzG3B56aOFDif+ISbc+hMlJbK4=</dsig:DigestValue>
+        <dsig:DigestValue>XIme39XR8jzlV5wCSLqqtDrBxZxWwxygj7zldU9xNT4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,14 +114,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SystemTrayApp.exe" size="738304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SystemTrayApp.exe" size="738816">
       <assemblyIdentity name="SystemTrayApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6HdUbaJUR/I6U4abJm5EWjyoJuZYmbnXhqH9rM2kv5A=</dsig:DigestValue>
+        <dsig:DigestValue>BxbhLXOXkvmTXLJjC2/boJk+BRwJfKaSRT63rzd37RE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

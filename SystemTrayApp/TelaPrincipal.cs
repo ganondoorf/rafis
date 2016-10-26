@@ -347,6 +347,16 @@ namespace SystemTrayApp
             {
                 toolStripStatusLabel1.Text = "Serviço Rafis não instalado.";
             }
+            try
+            {
+                loadGridResult(dataGridView1, "SELECT * FROM afis.ver_template;",true);
+                loadGridResult(dataGridView2, "SELECT * FROM afis.filaid;",false);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
             loadGridResult(dataGridView1, "SELECT * FROM afis.ver_template;",true);
             loadGridResult(dataGridView2, "SELECT * FROM afis.filaid;",false);
             comboBox1.DataSource = new[] { "Todos", "MT.rafis.net", "RJ.rafis.net", "RO.rafis.net", "RR.rafis.net" };
