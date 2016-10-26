@@ -128,11 +128,9 @@ namespace Rafis
                                 {
                                     int item_id = (int)dr["itemID"];
                                     int person_id = (int)dr["personID"];
-
                                     byte[] template_byte = (byte[])dr["template"];
                                     String caminho = (String)dr["caminhoImagem"];
                                     string cpf = (string)dr["CPF"];
-
                                     database.Add(Enroll(item_id, person_id, template_byte, caminho, cpf));
                                     Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item_id + "...", "//RafisCore.log");
                                 }

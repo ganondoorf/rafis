@@ -46,10 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectDB.cs" />
-    <Compile Include="IPessoaDAO.cs" />
+    <Compile Include="IfilaidDAO.cs" />
     <Compile Include="MySQLCommand.cs" />
-    <Compile Include="Pessoa.cs" />
-    <Compile Include="PessoaDAO.cs" />
+    <Compile Include="Filaid.cs" />
+    <Compile Include="FilaidDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
