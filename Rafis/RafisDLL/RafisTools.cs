@@ -11,13 +11,11 @@ namespace RafisDLL
 {
     public class RafisTools
     {
-        //configura conexoes
-        MySqlConnection Conexaoorigem, Conexaodestino;
-        
         #region Converter Base64 para Image
         /// <summary>
         /// Método para converter arquivo base64 para Image.
         /// </summary>
+        /// 
         public static Image Base64ToImage(string base64String)
         {
             //converter String Base64 para byte[]
@@ -55,10 +53,7 @@ namespace RafisDLL
             var directory = new DirectoryInfo(dirBase);
             DateTime from_date = DateTime.Parse(loadState());
             DateTime to_date = DateTime.Now;
-            var files = directory.GetFiles()
-              .Where(file => file.LastWriteTime >= from_date && file.LastWriteTime <= to_date);
-
-
+            var files = directory.GetFiles().Where(file => file.LastWriteTime >= from_date && file.LastWriteTime <= to_date);
             AfisEngine Afis = new AfisEngine();
             DateTime DataHoraAbertura;
             TimeSpan DiferencaDataHora;
@@ -73,14 +68,8 @@ namespace RafisDLL
             //Começamos a listar os arquivos
             int count = 0;
             foreach (FileInfo fileinfo in Arquivos)
-            {
-                
-                    
+            {     
                 DiferencaDataHora = (DateTime.Now).Subtract(DataHoraAbertura);
-                //this.label2.Text = String.Format("Dias: {0}, Horas: {1}, Minutos: {2}, Segundos: {3}, Milisegundos {4}, Ticks: {5}", DiferencaDataHora.Days, DiferencaDataHora.Hours, DiferencaDataHora.Minutes, DiferencaDataHora.Seconds, DiferencaDataHora.Milliseconds, DiferencaDataHora.Ticks);
-                //progressBar1.Value = count;
-                //dataGridView1.Rows.Insert(count, new Object[] { count, fileinfo.Name, fileinfo.LastWriteTime });
-                //label1.Text = "Índice: " + count;
                 Image imagem;
                 if (fileinfo.FullName.Contains(".jpg")) //se for Jpeg
                 {
@@ -111,8 +100,7 @@ namespace RafisDLL
                     Person pessoa01 = new Person();
                     pessoa01.Fingerprints.Add(fp01);
                     Afis.Extract(pessoa01);
-                    //dataGridView1.Rows.Insert(count, new Object[] { count, fileinfo.Name, fp01.AsXmlTemplate.ToString() });
-
+                   
                     //Utiliza o nome do arquivo como metadados, divide nome de arquivo com caracter "_" e depois o "." do .obj
                     String[] index = fileinfo.Name.ToString().Split('_');
                     String[] index2 = index[2].Split('.');
@@ -136,7 +124,8 @@ namespace RafisDLL
         #endregion 
 
         #region Converte template de uma imagem
-        public static Fingerprint ConverteTemplate(string file) {
+        public static Fingerprint ConverteTemplate(string file)
+        {
             AfisEngine Afis = new AfisEngine();
             Image imagem;
             if (file.Contains(".jpg")) //se for Jpeg
@@ -168,21 +157,18 @@ namespace RafisDLL
                 Person pessoa01 = new Person();
                 pessoa01.Fingerprints.Add(fp01);
                 Afis.Extract(pessoa01);
-                //dataGridView1.Rows.Insert(count, new Object[] { count, fileinfo.Name, fp01.AsXmlTemplate.ToString() });
-
                 //Utiliza o nome do arquivo como metadados, divide nome de arquivo com caracter "_" e depois o "." do .obj
                 return fp01;
             }
             else
             {
-                return null;//log - dataGridView1.Rows.Insert(count, new Object[] { count, fileinfo.Name, "Formato incorreto" });
+                //log - dataGridView1.Rows.Insert(count, new Object[] { count, fileinfo.Name, "Formato incorreto" });
+                return null;
             }
-           
-        
         }
         #endregion
 
-        #region Insere Templates no Banco --ok
+        #region Insere Templates no Banco
         public static void inserenodestino(int id, int pid, byte[] template, string caminho, string asXml, byte[] isoTemplate)
         {
             MySqlConnection Conexaoorigem, Conexaodestino;
@@ -191,16 +177,12 @@ namespace RafisDLL
             //configura conexoes
             Conexaoorigem = new MySqlConnection(ConOrigem);
             Conexaodestino = new MySqlConnection(ConDestino);
-            
-            //configura comandos sql
-            //string strcomando_origem = "Select item_id, item_data from biometria where item_type ='1'"; //;AND item_id%" + tbdividir.Text + "=" + tbresto.Text;
 
             try
             {
                 Conexaoorigem.Open();
                 Conexaodestino.Open();
             }
-
             catch (Exception)
             {
                
@@ -260,7 +242,7 @@ namespace RafisDLL
         }
         #endregion
         
-        #region Seleciona última entrada no banco e a data. --ok
+        #region Seleciona última entrada no banco e a data.
         public static string loadState()
         {
 
@@ -290,7 +272,5 @@ namespace RafisDLL
         }
 
         #endregion
-
-
     }
 }

@@ -15,6 +15,16 @@ namespace DAO
         private string _templateXml;
         private string _caminhoImagem;
         private string _cpf;
+        private int _opId;
+        private int _operacao;
+        private string _id_dedo;
+        private string _no_destino;
+        private string _no_origem;
+        private int _resultado;
+        private int _score;
+        private int node_dbsize;
+
+
 
         public int ItemId
         {
@@ -104,6 +114,110 @@ namespace DAO
             set
             {
                 _cpf = value;
+            }
+        }
+
+        public int OpId
+        {
+            get
+            {
+                return _opId;
+            }
+
+            set
+            {
+                _opId = value;
+            }
+        }
+
+        public int Operacao
+        {
+            get
+            {
+                return _operacao;
+            }
+
+            set
+            {
+                _operacao = value;
+            }
+        }
+
+        public string Id_dedo
+        {
+            get
+            {
+                return _id_dedo;
+            }
+
+            set
+            {
+                _id_dedo = value;
+            }
+        }
+
+        public string No_destino
+        {
+            get
+            {
+                return _no_destino;
+            }
+
+            set
+            {
+                _no_destino = value;
+            }
+        }
+
+        public string No_origem
+        {
+            get
+            {
+                return _no_origem;
+            }
+
+            set
+            {
+                _no_origem = value;
+            }
+        }
+
+        public int Resultado
+        {
+            get
+            {
+                return _resultado;
+            }
+
+            set
+            {
+                _resultado = value;
+            }
+        }
+
+        public int Score
+        {
+            get
+            {
+                return _score;
+            }
+
+            set
+            {
+                _score = value;
+            }
+        }
+
+        public int Node_dbsize
+        {
+            get
+            {
+                return node_dbsize;
+            }
+
+            set
+            {
+                node_dbsize = value;
             }
         }
     }
