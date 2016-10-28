@@ -2,9 +2,9 @@
 using NChordLib;
 using RafisDLL;
 using System;
-using System.Configuration;
 using MySql.Data.MySqlClient;
 using System.Collections.Generic;
+using DAO;
 
 namespace Rafis
 {
@@ -89,34 +89,57 @@ namespace Rafis
         {
             try
             {
-                string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
-                MySqlConnection conn = new MySqlConnection(ConOrigem);
+                TemplateDAO tempDAO = new TemplateDAO();
+                List<Template> templateList = new List<Template>();
+                templateList = tempDAO.ListaTodos();
+                foreach (Template item in templateList)
+                {
+                    item.No_destino = retornaNo(item.Cpf);
+                    item.No_origem = fqdn;
+                    item.Node_dbsize = CoMysql.CountTemplate();
+                    tempDAO.UpdateVer(item,"0");
+
+                    MySqlCommand command_update = new MySqlCommand("UPDATE `afis`.`ver_template` SET `no_destino`='" + no_destino + "', `resultado`=0 WHERE `itemID`='" + dr["itemID"].ToString() + "';", conn2);
+                    command_update.ExecuteNonQuery();
+
+
+
+                    TemplateClient sender = new TemplateClient();
+                    string[] connect = no_destino.Split(':');
+                    sender.SendToServer(templateSend, connect[0], Int32.Parse(connect[1]));
+
+
+
+                    MySqlCommand two = new MySqlCommand("UPDATE `afis`.`ver_template` SET `resultado`=1 WHERE `itemID`='" + dr["itemID"].ToString() + "';", conn2);
+                    two.ExecuteNonQuery();
+                    
+                    database.Add(Enroll(item.ItemId, item.PersonId, item.TemplateSA, item.CaminhoImagem, item.Cpf));
+                    Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item.ItemId + "...", "//RafisCore.log");
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
                 MySqlConnection conn2 = new MySqlConnection(ConOrigem);
-                MySqlCommand command_select = new MySqlCommand("select * from ver_template WHERE resultado is null order by itemID asc;", conn);
+                MySqlCommand command_select = new MySqlCommand(, conn);
                 conn.Open();
                 conn2.Open();
+
                 TemplateShare templateSend = new TemplateShare();
                 MySqlDataReader dr = command_select.ExecuteReader();
 
                 while (dr.Read())
                 {
-                   string no_destino = retornaNo(dr["CPF"].ToString());
-                   templateSend.opId = Convert.ToInt32(dr["ItemID"]);
-                   templateSend.no_origem = fqdn;
-                   templateSend.operacao = Convert.ToInt32(dr["op"]);
-                   templateSend.template = (byte[])dr["template"];
-                   templateSend.template_iso = (byte[])dr["isoTemplate"];
-                   templateSend.cpf = (string)dr["CPF"];
-                   templateSend.id_dedo = (string)dr["dedoID"];
-                   templateSend.node_dbsize = DBsize;
-
-                   MySqlCommand command_update = new MySqlCommand("UPDATE `afis`.`ver_template` SET `no_destino`='"+no_destino+"', `resultado`=0 WHERE `itemID`='"+dr["itemID"].ToString()+"';", conn2);
-                   command_update.ExecuteNonQuery();
-                   TemplateClient sender = new TemplateClient();
-                   string[] connect = no_destino.Split(':');
-                   sender.SendToServer(templateSend,connect[0], Int32.Parse(connect[1]));
-                   MySqlCommand two = new MySqlCommand("UPDATE `afis`.`ver_template` SET `resultado`=1 WHERE `itemID`='" + dr["itemID"].ToString() + "';", conn2);
-                   two.ExecuteNonQuery();
+                   
                 }
                 conn2.Close(); 
                 dr.Close();

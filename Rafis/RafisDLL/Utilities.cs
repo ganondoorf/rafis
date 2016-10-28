@@ -337,7 +337,6 @@ namespace RafisDLL
         {
             try
             {
-
                 string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
                 //Utilities.log("Banco: "+Properties.Settings.Default.Banco+"\n");
                 MySqlConnection conn = new MySqlConnection(ConOrigem);

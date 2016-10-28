@@ -174,7 +174,6 @@ namespace DAO
         #region Seleciona última entrada no banco e a data.
         public static string loadState()
         {
-
             try
             {
                 string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
