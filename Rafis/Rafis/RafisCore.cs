@@ -1,8 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Data;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using SourceAFIS.Simple;
 using RafisDLL;
@@ -32,7 +30,6 @@ namespace Rafis
         }
         #endregion 
 
-        string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
         bool running = true;
         List<MyPerson> database = new List<MyPerson>();
                 
@@ -45,15 +42,16 @@ namespace Rafis
             List<int> candidates = new List<int>();
             MyPerson probe = new MyPerson();
             Fingerprint fp01 = new Fingerprint();
+            
             //Carrega lista de templates do Banco de Dados 
             selectListTemplates();
-            Utilities.log("["+DateTime.Now.ToString() + "]"+" Comparando impressões...", "//RafisCore.log");
 
+            Utilities.log("["+DateTime.Now.ToString() + "]"+" Comparando impressões...", "//RafisCore.log");
             while (running)
             {
                 try
                 {
-                    DAO.FilaidDAO filaid = new FilaidDAO();
+                    FilaidDAO filaid = new FilaidDAO();
                     DataTable itens = filaid.ConsultarResult();
                     foreach (DataRow item in itens.Rows)
                     {
@@ -86,50 +84,37 @@ namespace Rafis
             }
             Utilities.log("Encerrando: " + DateTime.Now.ToString());
         }
-        //public void close()
-        //{
-        //    running = false;
-        //}
+        public void close()
+        {
+            running = false;
+        }
         #endregion
 
-        #region Conecta no Banco e seleciona a base de Templates -->
+        #region Conecta no Banco e recupera a base de Templates
         public void selectListTemplates()
         {
             if (true)//!File.Exists("database.dat") conrrigir
             {
                 //registra o log com total de templates recuperados.
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando " + CoMysql.CountTemplate().ToString() + " templates existentes...", "//RafisCore.log");
-
                 try
                 {
-                    using (MySqlConnection conn = new MySqlConnection(ConOrigem))
+                    TemplateDAO templates = new TemplateDAO();
+                    List<Template> templateList = new List<Template>();
+                    templateList = templates.ListaTodos();
+                    foreach (Template item in templateList)
                     {
-                        using (MySqlCommand command = new MySqlCommand("Select * from template_view;", conn))
-                        {
-                            conn.Open();
-                            using (MySqlDataReader dr = command.ExecuteReader())
-                            {
-                                while (dr.Read())
-                                {
-                                    int item_id = (int)dr["itemID"];
-                                    int person_id = (int)dr["personID"];
-                                    byte[] template_byte = (byte[])dr["template"];
-                                    String caminho = (String)dr["caminhoImagem"];
-                                    string cpf = (string)dr["CPF"];
-                                    database.Add(Enroll(item_id, person_id, template_byte, caminho, cpf));
-                                    Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item_id + "...", "//RafisCore.log");
-                                }
-                            }
-                        }
+                        database.Add(Enroll(item.ItemId, item.PersonId, item.TemplateSA, item.CaminhoImagem, item.Cpf));
+                        Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item.ItemId + "...", "//RafisCore.log");
                     }
                 }
                 catch (Exception ex)
                 {
                     throw new Exception("[" + DateTime.Now.ToString() + "] " + "Erro ao acessar o banco de Templates " + ex.Message);
                 }
+
                 BinaryFormatter formatter = new BinaryFormatter();
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Salvando arquivo stream...", "//RafisCore.log");
-
                 using (Stream stream = File.Open("database.dat", FileMode.Create))
                 {
                     formatter.Serialize(stream, database);
@@ -155,7 +140,5 @@ namespace Rafis
             return person;
         }
         #endregion
-
-    
     }
 }
