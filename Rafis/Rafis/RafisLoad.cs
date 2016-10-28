@@ -4,6 +4,7 @@ using RafisDLL;
 using System;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace Rafis
 {
@@ -12,14 +13,12 @@ namespace Rafis
         bool running = true;
         string fqdn = System.Net.Dns.GetHostEntry("LocalHost").HostName;
         int DBsize = 0;
+
         #region Inicia servidor Nchord
         public void load(int localport, string seedip, int seedport)
         {
-            
-            // start new ring
+            //inicia novo anel
             int portNum = localport;
-            
-            //ChordServer.LocalNode = new ChordNode(System.Net.Dns.GetHostName(), portNum);
             ChordServer.LocalNode = new ChordNode(fqdn, portNum);
             Utilities.log("Iniciando instância "+ fqdn + " : "+DateTime.Now.ToString());
             ChordInstance instance;
@@ -28,7 +27,6 @@ namespace Rafis
             if (ChordServer.RegisterService(portNum))
             {
                 instance = ChordServer.GetInstance(ChordServer.LocalNode);
-
                 //Verifica se o processo Nchord vai ser seed ou nó cliente.
                 if (seedip=="")
                 {
@@ -37,32 +35,22 @@ namespace Rafis
                 else
                 {
                     instance.Join(new ChordNode(seedip, seedport), ChordServer.LocalNode.Host, ChordServer.LocalNode.PortNumber);
-                
                 }
-                        
                 try
                 {
-                    string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
-                    MySqlConnection conn = new MySqlConnection(ConOrigem);
-                    MySqlCommand command = new MySqlCommand("SELECT distinct(CPF),personID FROM template_view where CPF!=0;", conn);
-                    conn.Open();
-                    //List<template> listaTemplates = new List<template>()                
-                    MySqlDataReader dr = command.ExecuteReader();
-                    while (dr.Read())
+                    List<string> cpfs = new List<string>();
+                    foreach (string item in cpfs)
                     {
-                        //instance.AddKey(dr["CPF"].ToString(), estado);
-                        instance.AddKey(dr["CPF"].ToString(), instance.Host.ToString());
-                        Utilities.log("[" + DateTime.Now.ToString() + "] " + "Protuário " + dr["CPF"].ToString() + " do Estado " + instance.Host.ToString() + " inserido na base.");
+                        instance.AddKey(item, instance.Host.ToString());
+                        Utilities.log("[" + DateTime.Now.ToString() + "] " + "Protuário " + item + " do Estado " + instance.Host.ToString() + " inserido na base.");
                     }
-                    dr.Close();
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Erro ao acessar o banco afis " + ex.Message);
+                    throw new Exception("Erro ao recuperar os CPFs do banco " + ex.Message);
                 }
             }
 
-            
             instance = ChordServer.GetInstance(ChordServer.LocalNode);
             running = true;
             while (running)
@@ -75,16 +63,14 @@ namespace Rafis
                 }
                 //captura tamanho da base.
                 DBsize = count;
-
+                //envia templates
                 sendTemplates();
                 Utilities.log("[" + DateTime.Now.ToString() + "] " + "Rodando: " + count + " prontuarios disponíveis.");
-
                 System.Threading.Thread.Sleep(10000);
-
             }
             Utilities.log("Encerrando: " + DateTime.Now.ToString());
         }
-
+  
         public void close() 
         {
             running = false;
@@ -143,11 +129,6 @@ namespace Rafis
 
         }
         #endregion
-
-        public static void getConf(Properties.Settings tmp)
-        {
-            throw new NotImplementedException();
-        }
-
+        
     }
 }

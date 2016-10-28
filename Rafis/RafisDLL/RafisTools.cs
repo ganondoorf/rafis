@@ -137,7 +137,6 @@ namespace RafisDLL
 
         #region Converte template de uma imagem
         public static Fingerprint ConverteTemplate(string file) {
-
             AfisEngine Afis = new AfisEngine();
             Image imagem;
             if (file.Contains(".jpg")) //se for Jpeg
@@ -145,13 +144,13 @@ namespace RafisDLL
                 //tratar imagem caso seja JPG.
                 Image image_size;
                 image_size = Image.FromFile(file);
-                imagem = (Image)(new Bitmap(image_size, new Size(808, 752)));
+                imagem = new Bitmap(image_size, new Size(808, 752));
             }
             else //caso contrário
             {
                 if (file.Contains(".obj")) //se for .obj, WSQ armazenado em Base64.
                 {
-                    System.IO.StreamReader inFile = new System.IO.StreamReader(file, System.Text.Encoding.ASCII);
+                    StreamReader inFile = new StreamReader(file, System.Text.Encoding.ASCII);
                     char[] base64CharArray = new char[inFile.BaseStream.Length];
                     inFile.Read(base64CharArray, 0, (int)inFile.BaseStream.Length);
                     string base64String = new string(base64CharArray);
