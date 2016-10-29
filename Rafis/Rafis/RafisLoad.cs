@@ -2,7 +2,6 @@
 using NChordLib;
 using RafisDLL;
 using System;
-using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using DAO;
 
@@ -95,13 +94,12 @@ namespace Rafis
                 TemplateClient sender = new TemplateClient();
                 foreach (Template item in templateList)
                 {
+                    //atualiza informações oriundas do chord na entrada de confronto
                     item.No_destino = retornaNo(item.Cpf);
                     item.No_origem = fqdn;
                     item.Resultado=0;
                     item.Node_dbsize = CoMysql.CountTemplate();
                     tempDAO.UpdateSend(item);
-
-                    
                     string[] connect = item.No_destino.Split(':');
                     //se o CPF não encontrado, encaminhar para todos... 1:n
                     if (item.No_destino=="")

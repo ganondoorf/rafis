@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using SourceAFIS.Simple;
+using DAO;
 namespace SystemTrayApp
 {
     public partial class TelaPrincipal : Form
@@ -33,7 +34,6 @@ namespace SystemTrayApp
             openFileDialog1.Title = "Selecione a imagem a ser enviada.";
             openFileDialog1.FileName = "";
             openFileDialog1.ShowDialog(); //abre janela para seleção da imagem
-
             textBox1.Text = openFileDialog1.FileName;
         }
 
@@ -315,7 +315,7 @@ namespace SystemTrayApp
                 
                 try
                 {
-                insereTransfer(maskedTextBox1.Text, dedo, fp01.Template, fp01.AsIsoTemplate, fp01.AsXmlTemplate.ToString(), templateObj.no_destino, templateObj.operacao);
+                CoMysql.insereTransfer(maskedTextBox1.Text, dedo, fp01.Template, fp01.AsIsoTemplate, fp01.AsXmlTemplate.ToString(), templateObj.no_destino, templateObj.operacao);
                 }
                 catch (Exception f)
                 {
@@ -362,51 +362,5 @@ namespace SystemTrayApp
             comboBox1.DataSource = new[] { "Todos", "MT.rafis.net", "RJ.rafis.net", "RO.rafis.net", "RR.rafis.net" };
         }
         #endregion
-
-        #region Insere Templates nas tabelas de transferência
-        public void insereTransfer(string cpf, string dedoID, byte[] template, byte[] isoTemplate, string xmlTemplate, string destino, int op)
-        {
-            //configura conexoes
-            MySqlConnection Conexaodestino = new MySqlConnection("Server=" + ip + ";Port=" + porta + ";Database=" + banco + ";Uid=" + login + ";Pwd=" + senha +";");
-            try
-            {
-                Conexaodestino.Open();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            MySqlCommand Commanddestino = new MySqlCommand();
-            Commanddestino.Connection = Conexaodestino;
-            Commanddestino.CommandText = "insert into ver_template (CPF, no_destino, template, isoTemplate, Template_xml, dedoID, op) values (@cpf,@destinoPar,@templatePar,@isoTemplatePar,@templateXml, @dedoIDPar, "+ op  +");";
-            MySqlParameter cpfPar = new MySqlParameter("@cpf", cpf);
-            MySqlParameter destinoPar = new MySqlParameter("@destinoPar", destino);
-            MySqlParameter templatePar = new MySqlParameter("@templatePar", MySqlDbType.VarBinary);
-            MySqlParameter iso_Template = new MySqlParameter("@isoTemplatePar", MySqlDbType.VarBinary);
-            MySqlParameter templateXml = new MySqlParameter("@templateXml", xmlTemplate);
-            MySqlParameter dedoIDPar = new MySqlParameter("@dedoIDPar", dedoID);
-            templatePar.Value = template;
-            iso_Template.Value = isoTemplate;
-            Commanddestino.Parameters.Add(cpfPar);
-            Commanddestino.Parameters.Add(destinoPar);
-            Commanddestino.Parameters.Add(templatePar);
-            Commanddestino.Parameters.Add(templateXml);
-            Commanddestino.Parameters.Add(iso_Template);
-            Commanddestino.Parameters.Add(dedoIDPar);
-            try
-            {
-                Commanddestino.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Erro na inserção do template: " + e);
-
-            }
-            finally
-            {
-                Conexaodestino.Close();
-            }
-        }
-        #endregion 
     }
 }

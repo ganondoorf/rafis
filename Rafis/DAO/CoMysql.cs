@@ -199,5 +199,98 @@ namespace DAO
 
         }
         #endregion
+
+        #region Atualiza o custo 
+        public static void updateCost()
+        {
+            try
+            {
+                string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
+                //Utilities.log("Banco: "+Properties.Settings.Default.Banco+"\n");
+                MySqlConnection conn = new MySqlConnection(ConOrigem);
+                MySqlConnection conn2 = new MySqlConnection(ConOrigem);
+                MySqlCommand command = new MySqlCommand("SELECT * from `afis`.`filaid` where custo is null;", conn);
+
+                conn.Open();
+
+                MySqlDataReader dr = command.ExecuteReader();
+                while (dr.Read())
+                {
+                    int Ordem = (int)dr["Ordem"];
+                    string no_origem = dr["no_orig"].ToString();
+
+                    MySqlCommand command2 = new MySqlCommand("SELECT * FROM afis.ranking_node where Name='" + no_origem + "';", conn2);
+                    conn2.Open();
+                    MySqlDataReader dr2 = command2.ExecuteReader();
+                    dr2.Read();
+                    double result = costCalc(Ordem, (int)dr2["DispNode"], (int)dr2["ReqNode"], (int)dr2["RespNode"], (int)dr2["NumPront"]);
+                    dr2.Close();
+                    conn2.Close();
+                    CoMysql.GenericCommand("UPDATE `afis`.`filaid` SET `custo`='" + result.ToString().Replace(",", ".") + "' where Ordem='" + Ordem + "';");
+
+                }
+                dr.Close();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                //Utilities.log("Utilities: Erro ao calcular o custo: " + ex);
+            }
+        }
+        #endregion
+
+        #region Calcula o custo
+        private static double costCalc(int OC, int DN, int NQ, int NR, int NP)
+        {
+            double resultado = OC - ((double)DN / 2) - ((double)NR / 2) + ((double)NQ / 100) - (5 * (double)NP / 1000000);
+            return resultado;
+        }
+        #endregion
+
+        #region Insere Templates nas tabelas de transferência
+        public static void insereTransfer(string cpf, string dedoID, byte[] template, byte[] isoTemplate, string xmlTemplate, string destino, int op)
+        {
+            //configura conexoes
+            MySqlConnection con = ConnectDB.GetInstancia.GetConnection();
+            try
+            {
+                con.Open();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            MySqlCommand Commanddestino = new MySqlCommand();
+            Commanddestino.Connection = con;
+            Commanddestino.CommandText = "insert into ver_template (CPF, no_destino, template, isoTemplate, Template_xml, dedoID, op) values (@cpf,@destinoPar,@templatePar,@isoTemplatePar,@templateXml, @dedoIDPar, " + op + ");";
+            MySqlParameter cpfPar = new MySqlParameter("@cpf", cpf);
+            MySqlParameter destinoPar = new MySqlParameter("@destinoPar", destino);
+            MySqlParameter templatePar = new MySqlParameter("@templatePar", MySqlDbType.VarBinary);
+            MySqlParameter iso_Template = new MySqlParameter("@isoTemplatePar", MySqlDbType.VarBinary);
+            MySqlParameter templateXml = new MySqlParameter("@templateXml", xmlTemplate);
+            MySqlParameter dedoIDPar = new MySqlParameter("@dedoIDPar", dedoID);
+            templatePar.Value = template;
+            iso_Template.Value = isoTemplate;
+            Commanddestino.Parameters.Add(cpfPar);
+            Commanddestino.Parameters.Add(destinoPar);
+            Commanddestino.Parameters.Add(templatePar);
+            Commanddestino.Parameters.Add(templateXml);
+            Commanddestino.Parameters.Add(iso_Template);
+            Commanddestino.Parameters.Add(dedoIDPar);
+            try
+            {
+                Commanddestino.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show("Erro na inserção do template: " + e);
+
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        #endregion 
     }
 }

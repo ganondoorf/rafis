@@ -3,8 +3,6 @@ using System.IO;
 using System.Linq;
 using System.ServiceProcess;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Configuration;
 
 namespace RafisDLL
 {
@@ -314,69 +312,8 @@ namespace RafisDLL
         }
         #endregion 
 
-        #region Método de execução update no MySQL --ok
-        public static void MySQLCommand(string myExecuteQuery, MySqlConnection myConnection)
-        {
-            try
-            {
-                MySqlCommand myCommand = new MySqlCommand(myExecuteQuery, myConnection);
-                myCommand.Connection.Open();
-                myCommand.ExecuteNonQuery();
-                myConnection.Close();
-            }
-            catch (Exception e)
-            {
+        
 
-                log("Erro: comando sql não executado pelo MySQLCommand: "+e);
-            }
-        }
-        #endregion
-
-        #region Atualiza o custo 
-        public static void updateCost()
-        {
-            try
-            {
-                string ConOrigem = ConfigurationManager.ConnectionStrings["ConexaoOrigem"].ConnectionString;
-                //Utilities.log("Banco: "+Properties.Settings.Default.Banco+"\n");
-                MySqlConnection conn = new MySqlConnection(ConOrigem);
-                MySqlConnection conn2 = new MySqlConnection(ConOrigem);
-                MySqlCommand command = new MySqlCommand("SELECT * from `afis`.`filaid` where custo is null;", conn);
-
-                conn.Open();
-
-                MySqlDataReader dr = command.ExecuteReader();
-                while (dr.Read())
-                {
-                    int Ordem = (int)dr["Ordem"];
-                    string no_origem = dr["no_orig"].ToString();
-
-                    MySqlCommand command2 = new MySqlCommand("SELECT * FROM afis.ranking_node where Name='"+no_origem+"';", conn2);
-                    conn2.Open();
-                    MySqlDataReader dr2 = command2.ExecuteReader();
-                    dr2.Read();
-                    double result = costCalc(Ordem, (int)dr2["DispNode"], (int)dr2["ReqNode"], (int)dr2["RespNode"], (int)dr2["NumPront"]);
-                    dr2.Close();
-                    conn2.Close();
-                    Utilities.MySQLCommand("UPDATE `afis`.`filaid` SET `custo`='"+result.ToString().Replace(",",".")+"' where Ordem='" + Ordem + "';", conn2);
-
-                }
-                dr.Close();
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                Utilities.log("Utilities: Erro ao calcular o custo: " + ex);
-            }
-        }
-        #endregion
-
-        #region Calcula o custo
-        private static double costCalc(int OC, int DN, int NQ, int NR, int NP)
-        {
-            double resultado = OC - ((double)DN / 2) - ((double)NR / 2) + ((double)NQ / 100) - (5 * (double)NP / 1000000);
-            return resultado;
-        }
-        #endregion
+       
     }
 }

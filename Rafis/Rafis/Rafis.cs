@@ -3,6 +3,7 @@ using System.IO;
 using System.ServiceProcess;
 using System.Threading;
 using RafisDLL;
+using DAO;
 
 namespace Rafis
 {
@@ -61,12 +62,12 @@ namespace Rafis
             private void timer1_Tick(object sender)
             {
                 string files = Utilities.numArquivos(@"C:\Afis");
-                string lastDate = RafisTools.loadState();
+                string lastDate = CoMysql.loadState();
                 Utilities.log("Servico Rodando: " + DateTime.Now.ToString()+". Com "+files+" arquivos listados. Última modificação em: "+lastDate);
             }
             private void ThreadNChord()
             {
-                load.load(Int32.Parse(localPort), ip, Int32.Parse(seedPort));
+                load.load(int.Parse(localPort), ip, int.Parse(seedPort));
             }
             private void ThreadTransfer()
             {

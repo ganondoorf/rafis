@@ -24,9 +24,7 @@ namespace DAO
         private int _resultado;
         private int _score;
         private int node_dbsize;
-
-
-
+        
         public int ItemId
         {
             get

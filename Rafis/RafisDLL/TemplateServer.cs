@@ -4,6 +4,7 @@ using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Configuration;
 using MySql.Data.MySqlClient;
+using DAO;
 
 namespace RafisDLL
 {
@@ -33,6 +34,23 @@ namespace RafisDLL
                     TemplateShare testObj = (TemplateShare)fmtr.Deserialize(stream);
 
                     RafisDLL.Utilities.log("[" + DateTime.Now.ToString() + "] " + "Template " + testObj.cpf + " recebido com sucesso: " + testObj.opId + ", " + testObj.no_origem + ", " + testObj.operacao + ", " + testObj.id_dedo, "//TemplateServer.log");
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+                    /// TODO: Criar método estático para listar templates no servidor. Encapsular esta seção. 
+
+
 
                     MySqlCommand Commanddestino = new MySqlCommand();
                     MySqlCommand InsertNodes = new MySqlCommand();
@@ -74,8 +92,31 @@ namespace RafisDLL
                             Commanddestino.ExecuteNonQuery();
                         }
                         Commanddestino.ExecuteNonQuery();
-                        Utilities.MySQLCommand("UPDATE `afis`.`ranking_node` SET `ReqNode`=`ReqNode`+1,`NumPront`='" + testObj.node_dbsize + "' where Name='" + testObj.no_origem + "';", conn2);
-                        Utilities.updateCost();
+                        CoMysql.GenericCommand("UPDATE `afis`.`ranking_node` SET `ReqNode`=`ReqNode`+1,`NumPront`='" + testObj.node_dbsize + "' where Name='" + testObj.no_origem + "';");
+                        CoMysql.updateCost();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     }
                     catch (Exception e)
                     {
