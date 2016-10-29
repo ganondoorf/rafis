@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
+    [Serializable]
     public class Template
     {
         private int _itemId;

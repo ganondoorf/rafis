@@ -88,7 +88,7 @@ namespace DAO
                     try
                     {
                         con.Open();
-                        MySqlCommand cmd = new MySqlCommand("select * from ver_template WHERE resultado is null order by itemID asc;", con);
+                        MySqlCommand cmd = new MySqlCommand("select * from send_template WHERE resultado is null order by itemID asc;", con);
                         List<Template> listaTemplates = new List<Template>();
                         MySqlDataReader item = cmd.ExecuteReader();
 
@@ -101,11 +101,11 @@ namespace DAO
                             template.IsoTemplate = (byte[])item["isoTemplate"];
                             template.Cpf = (string)item["CPF"];
                             template.Id_dedo = (string)item["dedoID"];
-                            //template.No_origem = ;
-                            //template.No_destino = ;
+                            template.No_origem = null ;
+                            template.No_destino = null;
                             //template.PersonId = (int)item["personID"];
                             //template.CaminhoImagem = (string)item["caminhoImagem"];
-                            // template.Node_dbsize = ;
+                            template.Node_dbsize = 0;
                             listaTemplates.Add(template);
                         }
                         return listaTemplates;
@@ -125,18 +125,59 @@ namespace DAO
             }
         }
 
-
-        public void UpdateVer(Template template, string resultado)
+        public void UpdateSend(Template template)
         {
             try
             {
                 using (MySqlConnection con = ConnectDB.GetInstancia.GetConnection())
                     try
                     {
+                        //ver_template = send_template | filaid = proc_template
+                        string sql = "UPDATE `afis`.`send_template` SET `op`=@op,`personID`=@personID,`template`=@template,`no_destino`=@no_destino,`Template_xml`=@Template_xml,`isoTemplate`=@isoTemplate,`CPF`=@cpf,`dedoID`=@dedoID,`resultado`=@resultado,`score`=@score WHERE `itemID`=@itemID;";
+                        MySqlCommand cmd = new MySqlCommand(sql, con);
+                        cmd.Parameters.AddWithValue("@itemID", template.ItemId);
+                        cmd.Parameters.AddWithValue("@op", template.Operacao);
+                        cmd.Parameters.AddWithValue("@personID", template.PersonId);
+                        cmd.Parameters.AddWithValue("@template", template.TemplateSA);
+                        cmd.Parameters.AddWithValue("@no_destino", template.No_destino);
+                        cmd.Parameters.AddWithValue("@Template_xml", template.TemplateXml);
+                        cmd.Parameters.AddWithValue("@isoTemplate", template.IsoTemplate);
+                        cmd.Parameters.AddWithValue("@cpf", template.Cpf);
+                        cmd.Parameters.AddWithValue("@dedoID", template.Id_dedo);
+                        cmd.Parameters.AddWithValue("@resultado", template.Resultado);
+                        cmd.Parameters.AddWithValue("@score", template.Score);
                         con.Open();
-                        MySqlCommand cmd = new MySqlCommand("UPDATE `afis`.`ver_template` SET `no_destino`='" + template.No_destino + "', `resultado`='"+resultado+"' WHERE `itemID`='" + template.ItemId + "';", con);
                         cmd.ExecuteNonQuery();
-                                                
+                    }
+                    catch (MySqlException ex)
+                    {
+                        throw ex;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void UpdateSendResult(int itemID, int result)
+        {
+            try
+            {
+                using (MySqlConnection con = ConnectDB.GetInstancia.GetConnection())
+                    try
+                    {
+                        //ver_template = send_template | filaid = proc_template
+                        string sql = "UPDATE `afis`.`send_template` SET `resultado`=@resultado WHERE `itemID`=@itemID;";
+                        MySqlCommand cmd = new MySqlCommand(sql, con);
+                        cmd.Parameters.AddWithValue("@itemID", itemID);
+                        cmd.Parameters.AddWithValue("@resultado", result);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
                     }
                     catch (MySqlException ex)
                     {

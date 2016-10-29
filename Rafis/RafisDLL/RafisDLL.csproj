@@ -71,6 +71,10 @@
       <Project>{efe450d1-4007-41e4-99fd-ec47b062a4bb}</Project>
       <Name>NChordLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{22c68e00-0f81-490b-8e6e-f963d409526f}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

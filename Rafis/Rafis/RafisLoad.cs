@@ -91,65 +91,34 @@ namespace Rafis
             {
                 TemplateDAO tempDAO = new TemplateDAO();
                 List<Template> templateList = new List<Template>();
-                templateList = tempDAO.ListaTodos();
+                templateList = tempDAO.ListaVerNull();
+                TemplateClient sender = new TemplateClient();
                 foreach (Template item in templateList)
                 {
                     item.No_destino = retornaNo(item.Cpf);
                     item.No_origem = fqdn;
+                    item.Resultado=0;
                     item.Node_dbsize = CoMysql.CountTemplate();
-                    tempDAO.UpdateVer(item,"0");
+                    tempDAO.UpdateSend(item);
 
-                    MySqlCommand command_update = new MySqlCommand("UPDATE `afis`.`ver_template` SET `no_destino`='" + no_destino + "', `resultado`=0 WHERE `itemID`='" + dr["itemID"].ToString() + "';", conn2);
-                    command_update.ExecuteNonQuery();
-
-
-
-                    TemplateClient sender = new TemplateClient();
-                    string[] connect = no_destino.Split(':');
-                    sender.SendToServer(templateSend, connect[0], Int32.Parse(connect[1]));
-
-
-
-                    MySqlCommand two = new MySqlCommand("UPDATE `afis`.`ver_template` SET `resultado`=1 WHERE `itemID`='" + dr["itemID"].ToString() + "';", conn2);
-                    two.ExecuteNonQuery();
                     
-                    database.Add(Enroll(item.ItemId, item.PersonId, item.TemplateSA, item.CaminhoImagem, item.Cpf));
-                    Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item.ItemId + "...", "//RafisCore.log");
+                    string[] connect = item.No_destino.Split(':');
+                    //se o CPF não encontrado, encaminhar para todos... 1:n
+                    if (item.No_destino=="")
+                    {
+                        //TODO
+                    }
+                    else
+                    {
+                        sender.SendToServer(item, connect[0], Int32.Parse(connect[1]));
+                    }
+                    tempDAO.UpdateSendResult(item.ItemId,1);
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-                MySqlConnection conn2 = new MySqlConnection(ConOrigem);
-                MySqlCommand command_select = new MySqlCommand(, conn);
-                conn.Open();
-                conn2.Open();
-
-                TemplateShare templateSend = new TemplateShare();
-                MySqlDataReader dr = command_select.ExecuteReader();
-
-                while (dr.Read())
-                {
-                   
-                }
-                conn2.Close(); 
-                dr.Close();
-                conn.Clone();      
             }
             catch (Exception ex)
             {
                 Utilities.log("Falha no envio do template: "+ex);
             }
-
         }
         #endregion
         
