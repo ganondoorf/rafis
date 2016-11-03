@@ -3,6 +3,8 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using SourceAFIS.Simple;
 using DAO;
+using System.Collections.Generic;
+
 namespace SystemTrayApp
 {
     public partial class TelaPrincipal : Form
@@ -242,6 +244,23 @@ namespace SystemTrayApp
         {
             try
             {
+
+
+                TemplateDAO templates = new TemplateDAO();
+                List<Template> templateList = new List<Template>();
+                templateList = templates.ListaTodos();
+                foreach (Template item in templateList)
+                {
+                    database.Add(Enroll(item.ItemId, item.PersonId, item.TemplateSA, item.CaminhoImagem, item.Cpf));
+                    Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item.ItemId + "...", "//RafisCore.log");
+                }
+
+
+
+
+
+
+
                 using ( MySqlConnection conn = new MySqlConnection("Server=" + ip + ";Port=" + porta + ";Database=" + banco + ";Uid=" + login + ";Pwd=" + senha +";"))
                 {
                     using (MySqlCommand command = new MySqlCommand(sql, conn))
@@ -349,16 +368,14 @@ namespace SystemTrayApp
             }
             try
             {
-                loadGridResult(dataGridView1, "SELECT * FROM afis.ver_template;",true);
-                loadGridResult(dataGridView2, "SELECT * FROM afis.filaid;",false);
+                loadGridResult(dataGridView1, "SELECT * FROM afis.send_template;",true);
+                loadGridResult(dataGridView2, "SELECT * FROM afis.proc_template;",false);
             }
             catch (Exception)
             {
                 
                 throw;
             }
-            loadGridResult(dataGridView1, "SELECT * FROM afis.ver_template;",true);
-            loadGridResult(dataGridView2, "SELECT * FROM afis.filaid;",false);
             comboBox1.DataSource = new[] { "Todos", "MT.rafis.net", "RJ.rafis.net", "RO.rafis.net", "RR.rafis.net" };
         }
         #endregion

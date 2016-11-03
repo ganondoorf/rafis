@@ -110,7 +110,7 @@ namespace DAO
         
         }
 
-        public static void UpdateRanking(string Name, bool DispNode, bool ReqNode, bool RespNode, int Node_dbsize)
+        public static void UpdateRanking(string Name, int DispNode, int ReqNode, int RespNode, int Node_dbsize)
         { 
             try
             {
@@ -126,7 +126,7 @@ namespace DAO
                     int result = TemplateDAO.ifNodeExist(Name);
                     if (result==1)
 	                        {
-                            string sql = "UPDATE `afis`.`ranking_node` SET `ReqNode`=`ReqNode`+1,`NumPront`=@Node_dbsize where `Name`=@Name;";
+                            string sql = "UPDATE `afis`.`ranking_node` SET `ReqNode`=`ReqNode`+"+ReqNode+", `DispNode`=`DispNode`+"+DispNode+ ", `RespNode`=`RespNode`+"+RespNode+" ,`NumPront`=@Node_dbsize where `Name`=@Name;";
                             MySqlCommand cmd = new MySqlCommand(sql, con);
                             cmd.Parameters.AddWithValue("@Name", Name);
                             cmd.Parameters.AddWithValue("@Node_dbsize", Node_dbsize);

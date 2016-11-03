@@ -33,10 +33,10 @@ namespace RafisDLL
                     string ip = client.Client.AddressFamily.ToString();
                     Template template_rec = (Template)fmtr.Deserialize(stream);
 
-                    RafisDLL.Utilities.log("[" + DateTime.Now.ToString() + "] " + "Template " + template_rec.Cpf + " recebido com sucesso: " + template_rec.OpId + ", " + template_rec.No_origem + ", " + template_rec.Operacao + ", " + template_rec.Id_dedo, "//TemplateServer.log");
+                    Utilities.log("[" + DateTime.Now.ToString() + "] " + "Template " + template_rec.Cpf + " recebido com sucesso: " + template_rec.OpId + ", " + template_rec.No_origem + ", " + template_rec.Operacao + ", " + template_rec.Id_dedo, "//TemplateServer.log");
 
                     FilaidDAO.InsertFilaID(template_rec);
-                    FilaidDAO.UpdateRanking(template_rec.No_origem, false, true, false, template_rec.Node_dbsize);
+                    FilaidDAO.UpdateRanking(template_rec.No_origem, 0, 1, 0, template_rec.Node_dbsize);
                   
                     stream.Close();
                     client.Close();
