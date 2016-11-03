@@ -31,98 +31,13 @@ namespace RafisDLL
                     TcpClient client = server.AcceptTcpClient();
                     NetworkStream stream = client.GetStream();
                     string ip = client.Client.AddressFamily.ToString();
-                    TemplateShare testObj = (TemplateShare)fmtr.Deserialize(stream);
+                    Template template_rec = (Template)fmtr.Deserialize(stream);
 
-                    RafisDLL.Utilities.log("[" + DateTime.Now.ToString() + "] " + "Template " + testObj.cpf + " recebido com sucesso: " + testObj.opId + ", " + testObj.no_origem + ", " + testObj.operacao + ", " + testObj.id_dedo, "//TemplateServer.log");
+                    RafisDLL.Utilities.log("[" + DateTime.Now.ToString() + "] " + "Template " + template_rec.Cpf + " recebido com sucesso: " + template_rec.OpId + ", " + template_rec.No_origem + ", " + template_rec.Operacao + ", " + template_rec.Id_dedo, "//TemplateServer.log");
 
-                    
-
-
-
-
-
-
-
-
-
-
-
-
-                    /// TODO: Criar método estático para listar templates no servidor. Encapsular esta seção. 
-
-
-
-                    MySqlCommand Commanddestino = new MySqlCommand();
-                    MySqlCommand InsertNodes = new MySqlCommand();
-
-                    Commanddestino.Connection = conn;
-                    InsertNodes.Connection = conn;
-
-                    int result = 0;
-                    using (MySqlCommand cmd = new MySqlCommand())
-                    {
-                        cmd.Connection = conn;
-                        cmd.CommandText = @"SELECT EXISTS(SELECT 1 FROM afis.ranking_node WHERE name=@Name LIMIT 1)";
-                        cmd.Parameters.AddWithValue("@Name", testObj.no_origem);
-                        conn.Open();
-                        try
-                        {
-                            result = Convert.ToInt32(cmd.ExecuteScalar());
-                        }
-                        catch (Exception e)
-                        {
-
-                            Utilities.log("[" + DateTime.Now.ToString() + "] " + "Erro na inserção do template recebido: " + e);
-                        } 
-                       conn.Close();
-                    }
-
-                    Commanddestino.CommandText = "INSERT INTO `afis`.`filaid` (`ItemId`, `CPF`, `Template`, `no_orig`) VALUES ('" + testObj.opId + "', '" + testObj.cpf + "', @isoTemplatePar, '" + testObj.no_origem + "');";
-                    InsertNodes.CommandText = "INSERT INTO `afis`.`ranking_node` (`Name`, `DispNode`, `ReqNode`, `RespNode`, `NumPront`) VALUES ('" + testObj.no_origem + "', 0, 0, 0, '" + testObj.node_dbsize + "');";
-                    MySqlParameter iso_Template = new MySqlParameter("@isoTemplatePar", MySqlDbType.VarBinary);
-                    iso_Template.Value =  testObj.template_iso;
-                    Commanddestino.Parameters.Add(iso_Template);
-
-                    conn.Open();
-                    try
-                    {
-                        if (0==result)
-                        {
-                            InsertNodes.ExecuteNonQuery();
-                            Commanddestino.ExecuteNonQuery();
-                        }
-                        Commanddestino.ExecuteNonQuery();
-                        CoMysql.GenericCommand("UPDATE `afis`.`ranking_node` SET `ReqNode`=`ReqNode`+1,`NumPront`='" + testObj.node_dbsize + "' where Name='" + testObj.no_origem + "';");
-                        CoMysql.updateCost();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    }
-                    catch (Exception e)
-                    {
-                        Utilities.log("[" + DateTime.Now.ToString() + "] " + "Erro na inserção do template recebido: " + e);
-                    }
-                    conn.Close();
+                    FilaidDAO.InsertFilaID(template_rec);
+                    FilaidDAO.UpdateRanking(template_rec.No_origem, false, true, false, template_rec.Node_dbsize);
+                  
                     stream.Close();
                     client.Close();
                 }

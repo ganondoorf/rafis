@@ -194,6 +194,15 @@ namespace DAO
             }
         }
 
+        public static int ifNodeExist(string nodeName)
+        {
+            MySqlConnection con = ConnectDB.GetInstancia.GetConnection();
+            MySqlCommand check = new MySqlCommand(@"SELECT EXISTS(SELECT 1 FROM afis.ranking_node WHERE name=@Name LIMIT 1)", con);
+            check.Parameters.AddWithValue("@Name", nodeName);
+            int result = (int)check.ExecuteScalar();
+            return result;
+        }
+
         public void Gravar(Template obj)
         {
             throw new NotImplementedException();
