@@ -169,7 +169,7 @@ namespace RafisDLL
         }
         #endregion
 
-        #region Dpapi - conexão segura
+        #region Dpapi - conexão segura - Não Implementado.
         public static void ProtectConnectionString()
         {
             ToggleConnectionStringProtection(desiredDir, true);
@@ -324,7 +324,7 @@ namespace RafisDLL
                     return ip;
                 }
             }
-            throw new Exception("Local IP Address Not Found!");
+            throw new Exception("Endereço IP Local não determinado!");
         }
 
         

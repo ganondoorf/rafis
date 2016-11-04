@@ -11,7 +11,7 @@ namespace Rafis
 {
     public class RafisCore
     {
-        #region Classes Serializable -->
+        #region Classes Serializable, MyPerson e MyFingerprint
         [Serializable]
         class MyFingerprint : Fingerprint
         {
@@ -127,7 +127,6 @@ namespace Rafis
         #region Enroll templates
         static MyPerson Enroll(int itemId, int personId, Byte[] template, string caminho, string cpf)//Enroll(int itemId,Byte[] template)
         {
-            
             MyFingerprint fp = new MyFingerprint();
             fp.Template = template;
             MyPerson person = new MyPerson();

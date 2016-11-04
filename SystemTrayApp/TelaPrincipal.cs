@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 using SourceAFIS.Simple;
 using DAO;
 using System.Collections.Generic;
@@ -279,11 +278,6 @@ namespace SystemTrayApp
             refresh();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox1.Text!="")
@@ -303,16 +297,6 @@ namespace SystemTrayApp
                 templateObj.template = fp01.Template;
                 templateObj.template_iso = fp01.AsIsoTemplate;
                 RafisDLL.TemplateClient cliente = new RafisDLL.TemplateClient();
-                try
-                {
-                    //cliente.SendToServer(templateObj, "srv-ro.politec.ro.gov.br", 777);
-                }
-                catch (Exception g)
-                {
-                    MessageBox.Show("Erro no envio do template: "+g);
-                    throw;
-                }
-                
                 try
                 {
                 CoMysql.insereTransfer(maskedTextBox1.Text, dedo, fp01.Template, fp01.AsIsoTemplate, fp01.AsXmlTemplate.ToString(), templateObj.no_destino, templateObj.operacao);

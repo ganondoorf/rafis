@@ -364,6 +364,33 @@ namespace NChordLib
         }
 
         /// <summary>
+        /// Retorna todos os nós presentes no anel Chord.
+        /// </summary>
+        /// <returns>Lista de nomes List<string> dos nós participantes do anel chord.</returns>
+        public static List<string> GetAllNodes()
+        {
+            ChordNode inicio = LocalNode;
+            List<string> nodes = new List<string>();
+            ChordNode remoteNode = GetSuccessor(inicio);
+
+            try
+            {
+                while (inicio.Host != remoteNode.Host)
+                {
+                    nodes.Add(remoteNode.Host);
+                    remoteNode = GetSuccessor(remoteNode);
+                }
+                return nodes;
+            }
+            catch (Exception ex)
+            {
+                Log(LogLevel.Debug, "Remote Accessor", "GetSuccessor error: {0}", ex.Message);
+                throw;
+            }
+                        
+        }
+
+        /// <summary>
         /// Safely checks whether a ChordInstance is valid by ensuring the port and successor values are valid.
         /// </summary>
         /// <param name="instance">The ChordInstance to validity-check.</param>
