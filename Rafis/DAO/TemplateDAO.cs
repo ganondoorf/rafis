@@ -95,7 +95,7 @@ namespace DAO
                         while (item.Read())
                         {
                             Template template = new Template();
-                            template.OpId = Convert.ToInt32(item["ItemID"]);
+                            template.ItemId = Convert.ToInt32(item["ItemID"]);
                             template.Operacao = Convert.ToInt32(item["op"]);
                             template.TemplateSA = (byte[])item["template"];
                             template.IsoTemplate = (byte[])item["isoTemplate"];
@@ -106,6 +106,111 @@ namespace DAO
                             //template.PersonId = (int)item["personID"];
                             //template.CaminhoImagem = (string)item["caminhoImagem"];
                             template.Node_dbsize = 0;
+                            listaTemplates.Add(template);
+                        }
+                        return listaTemplates;
+                    }
+                    catch (MySqlException ex)
+                    {
+                        throw ex;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Template> ListaSendTemplate()
+        {
+            try
+            {
+                using (MySqlConnection con = ConnectDB.GetInstancia.GetConnection())
+                    try
+                    {
+                        con.Open();
+                        MySqlCommand cmd = new MySqlCommand("SELECT * FROM afis.send_template;", con);
+                        List<Template> listaTemplates = new List<Template>();
+                        MySqlDataReader item = cmd.ExecuteReader();
+
+                        while (item.Read())
+                        {
+                            Template template = new Template();
+                            template.ItemId = Convert.ToInt32(item["ItemID"]);
+                            template.Operacao = Convert.ToInt32(item["op"]);
+                            template.TemplateSA = (byte[])item["template"];
+                            template.IsoTemplate = (byte[])item["isoTemplate"];
+                            template.Cpf = (string)item["CPF"];
+                            template.Id_dedo = (string)item["dedoID"];
+                            template.No_origem = null;
+                            template.No_destino = (string)item["No_destino"];
+                            template.Resultado = Convert.ToInt32(item["resultado"]);
+                            //template.Score = Convert.ToInt32(item["Score"]);
+                            //template.PersonId = (int)item["personID"];
+                            //template.CaminhoImagem = (string)item["caminhoImagem"];
+                            template.Node_dbsize = 0;
+                            listaTemplates.Add(template);
+                        }
+                        return listaTemplates;
+                    }
+                    catch (MySqlException ex)
+                    {
+                        throw ex;
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Template> ListaProcTemplate()
+        {
+            try
+            {
+                using (MySqlConnection con = ConnectDB.GetInstancia.GetConnection())
+                    try
+                    {
+                        con.Open();
+                        MySqlCommand cmd = new MySqlCommand("SELECT * FROM afis.proc_template;", con);
+                        List<Template> listaTemplates = new List<Template>();
+                        MySqlDataReader item = cmd.ExecuteReader();
+
+                        while (item.Read())
+                        {
+                            
+                            Template template = new Template();
+                            template.Ordem = Convert.ToInt32(item["Ordem"]);
+                            template.ItemId = Convert.ToInt32(item["ItemId"]);
+                            //template.Operacao = Convert.ToInt32(item["op"]);
+                            //template.TemplateSA = (byte[])item["template"];
+                            template.IsoTemplate = (byte[])item["Template"];
+                            //template.Id_dedo = (string)item["dedoID"];
+                            template.No_origem = (string)item["no_orig"];
+                            //template.No_destino = (string)item["no_destino"];
+                            //template.PersonId = (int)item["personID"];
+                            //template.CaminhoImagem = (string)item["caminhoImagem"];
+                            template.Custo = Convert.ToDouble(item["custo"]);
+                            template.Resultado = Convert.ToInt32(item["resultado"]);
+                            template.Score = Convert.ToInt32(item["Score"]);
+
+                            if (item["CPF"] == DBNull.Value) //checa se a entrada é nula.
+                            {
+                                template.Cpf = "";
+                            }
+                            else
+                            {
+                                template.Cpf = (string)item["CPF"];
+                            }
+
                             listaTemplates.Add(template);
                         }
                         return listaTemplates;
@@ -208,7 +313,7 @@ namespace DAO
             throw new NotImplementedException();
         }
 
-        public List<string> GetCPF()
+        public static List<string> GetCPF()
         {
             try
             {

@@ -240,55 +240,36 @@ namespace SystemTrayApp
     #endregion
 
         #region Carrega DataGridViews
-        public void loadGridResult(DataGridView dataGridView, string sql, bool consulta)
+        public void loadGridResult()
         {
             try
             {
-
+                dataGridView1.Rows.Clear();
+                dataGridView2.Rows.Clear();
 
                 TemplateDAO templates = new TemplateDAO();
                 List<Template> templateList = new List<Template>();
-                templateList = templates.ListaTodos();
+                templateList = templates.ListaSendTemplate();
+                int count = 0;
                 foreach (Template item in templateList)
                 {
-                    database.Add(Enroll(item.ItemId, item.PersonId, item.TemplateSA, item.CaminhoImagem, item.Cpf));
-                    Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item.ItemId + "...", "//RafisCore.log");
+                    dataGridView1.Rows.Insert(count, new Object[] { item.ItemId, item.Operacao, item.Cpf, item.Id_dedo.ToString(), item.IsoTemplate.ToString(), item.No_destino, item.Resultado, item.Score });
+                    count++;
                 }
 
-
-
-
-
-
-
-                using ( MySqlConnection conn = new MySqlConnection("Server=" + ip + ";Port=" + porta + ";Database=" + banco + ";Uid=" + login + ";Pwd=" + senha +";"))
+                count = 0;
+                templateList = templates.ListaProcTemplate();
+                foreach (Template item in templateList)
                 {
-                    using (MySqlCommand command = new MySqlCommand(sql, conn))
-                    {
-                        conn.Open();
-                        using (MySqlDataReader dr = command.ExecuteReader())
-                        {
-                            dataGridView.Rows.Clear();
-                            int count = 0;
-                            while (dr.Read())
-                            {
-                                if (consulta)
-                                {
-                                    dataGridView.Rows.Insert(count, new Object[] { dr["itemID"], dr["op"], dr["CPF"].ToString(), dr["dedoID"], dr["isoTemplate"].ToString(), dr["no_destino"], dr["resultado"], dr["score"] });
-                                }
-                                else
-                                {
-                                    dataGridView.Rows.Insert(count, new Object[] { dr["Ordem"], dr["ItemId"], dr["Template"].ToString(), dr["CPF"].ToString(), dr["resultado"], dr["Score"], dr["no_orig"].ToString(), dr["custo"] });
-                                }
-                                count++;
-                            }
-                        }
-                    }
+                    dataGridView2.Rows.Insert(count, new Object[] { item.Ordem, item.ItemId, item.IsoTemplate.ToString(), item.Cpf, item.Resultado, item.Score, item.No_origem, item.Custo });
+                    count++;
                 }
+                templateList = null;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception("Erro ao acessar o banco de iiccindice " + ex.Message);
+                MessageBox.Show("Erro no carregamento dos Datagrids: " + e);
+                throw;
             }
         }
         #endregion
@@ -368,12 +349,10 @@ namespace SystemTrayApp
             }
             try
             {
-                loadGridResult(dataGridView1, "SELECT * FROM afis.send_template;",true);
-                loadGridResult(dataGridView2, "SELECT * FROM afis.proc_template;",false);
+                loadGridResult();
             }
             catch (Exception)
-            {
-                
+            {   
                 throw;
             }
             comboBox1.DataSource = new[] { "Todos", "MT.rafis.net", "RJ.rafis.net", "RO.rafis.net", "RR.rafis.net" };

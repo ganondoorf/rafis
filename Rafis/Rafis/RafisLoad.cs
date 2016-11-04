@@ -16,6 +16,7 @@ namespace Rafis
         #region Inicia servidor Nchord
         public void load(int localport, string seedip, int seedport)
         {
+            
             //inicia novo anel
             int portNum = localport;
             ChordServer.LocalNode = new ChordNode(fqdn, portNum);
@@ -37,7 +38,7 @@ namespace Rafis
                 }
                 try
                 {
-                    List<string> cpfs = new List<string>();
+                    List<string> cpfs = TemplateDAO.GetCPF();
                     foreach (string item in cpfs)
                     {
                         instance.AddKey(item, instance.Host.ToString());

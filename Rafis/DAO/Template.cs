@@ -9,6 +9,7 @@ namespace DAO
     [Serializable]
     public class Template
     {
+        private int _ordem;
         private int _itemId;
         private int _personId;
         private byte[] _template;
@@ -23,8 +24,22 @@ namespace DAO
         private string _no_origem;
         private int _resultado;
         private int _score;
-        private int node_dbsize;
-        
+        private int _node_dbsize;
+        private double _custo;
+
+        public int Ordem
+        {
+            get
+            {
+                return _ordem;
+            }
+
+            set
+            {
+                _ordem = value;
+            }
+        }
+
         public int ItemId
         {
             get
@@ -211,13 +226,26 @@ namespace DAO
         {
             get
             {
-                return node_dbsize;
+                return _node_dbsize;
             }
 
             set
             {
-                node_dbsize = value;
+                _node_dbsize = value;
             }
         }
+        public double Custo
+        {
+            get
+            {
+                return _custo;
+            }
+
+            set
+            {
+                _custo = value;
+            }
+        }
+
     }
 }

@@ -19,3 +19,16 @@ Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.dll
 Z:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.pdb
 Z:\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.dll
 Z:\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.pdb
+Z:\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.csprojResolveAssemblyReference.cache
+Y:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.dll
+Y:\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.pdb
+Y:\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.dll
+Y:\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.pdb
+\\psf\Home\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.dll
+\\psf\Home\Projetos\rafis\rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.pdb
+\\psf\Home\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.dll
+\\psf\Home\Projetos\rafis\rafis\Nchord\NChordLib\obj\Debug\NChordLib.pdb
+C:\Rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.dll
+C:\Rafis\SystemTrayApp\bin\Debug\Nchord\NChordLib.pdb
+C:\Rafis\Nchord\NChordLib\obj\Debug\NChordLib.dll
+C:\Rafis\Nchord\NChordLib\obj\Debug\NChordLib.pdb

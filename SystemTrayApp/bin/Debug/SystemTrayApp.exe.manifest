@@ -42,6 +42,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DAO.dll" size="22528">
+      <assemblyIdentity name="DAO" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>HX4SWESz0j56UoGs7VdvtbJ96wCk4rkhbYVxxMfSFjk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="438272">
       <assemblyIdentity name="MySql.Data" version="6.7.4.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -61,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JDOhtlbprtBDiGa5yvgDyKJhiTZkBUyiZi4jdrDdfUo=</dsig:DigestValue>
+        <dsig:DigestValue>XJ85IR2EI2tx3hYWV4CI2VbPPVt5C+jHh9/hzXy+GPk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,26 +90,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rafis.exe" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Rafis.exe" size="15360">
       <assemblyIdentity name="Rafis" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0LF6VX2ddItY4wgdgX7v3LrFcXE5qpP6Q7+5/3NXjp8=</dsig:DigestValue>
+        <dsig:DigestValue>gZHCw6Jc3z/bKDi7zxVUWLkcaSNaeLhtYAy+43ojqrg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RafisDLL.dll" size="19968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RafisDLL.dll" size="15360">
       <assemblyIdentity name="RafisDLL" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XIme39XR8jzlV5wCSLqqtDrBxZxWwxygj7zldU9xNT4=</dsig:DigestValue>
+        <dsig:DigestValue>d5gLNEP2s7KRJYG9MqmJPgt+gesMR2LazCL/NnkT/5s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,14 +126,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SystemTrayApp.exe" size="738816">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SystemTrayApp.exe" size="737280">
       <assemblyIdentity name="SystemTrayApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BxbhLXOXkvmTXLJjC2/boJk+BRwJfKaSRT63rzd37RE=</dsig:DigestValue>
+        <dsig:DigestValue>V3uLG2jQ1lZGW5w40FUNdPDkKzNDXz01Q/CpMXuBFQ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

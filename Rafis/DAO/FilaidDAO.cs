@@ -23,7 +23,7 @@ namespace DAO
                     try
                     {
                         con.Open();
-                        MySqlCommand cmd = new MySqlCommand("SELECT * from filaid where resultado='" + resultado +"' ORDER by custo ASC;", con);
+                        MySqlCommand cmd = new MySqlCommand("SELECT * from proc_template where resultado='" + resultado +"' ORDER by custo ASC;", con);
                         MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                         DataTable itens = new DataTable();
                         da.Fill(itens);
@@ -50,7 +50,7 @@ namespace DAO
                     try
                     {
                         con.Open();
-                        MySqlCommand cmd = new MySqlCommand("SELECT * from filaid where resultado is null ORDER by custo ASC;", con);
+                        MySqlCommand cmd = new MySqlCommand("SELECT * from proc_template where resultado is null ORDER by custo ASC;", con);
                         MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                         DataTable itens = new DataTable();
                         da.Fill(itens);

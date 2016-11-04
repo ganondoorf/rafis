@@ -181,12 +181,12 @@ namespace SystemTrayApp
 		void Start_Click(object sender, EventArgs e)
 		{
 
-			string nc_port = Properties.Settings.Default.nc_port;
-            string nc_server = Properties.Settings.Default.nc_server;
+			//string nc_port = Properties.Settings.Default.nc_port;
+            //string nc_server = Properties.Settings.Default.nc_server;
 
 
-            string[] parametros = { Properties.Settings.Default.nc_port, Properties.Settings.Default.nc_server, Properties.Settings.Default.nc_seed_port };
-
+            //string[] parametros = { Properties.Settings.Default.nc_port, Properties.Settings.Default.nc_server, Properties.Settings.Default.nc_seed_port };
+            string[] parametros = {"1000","",""};
 			   Utilities.StartService("Rafis",parametros, 10000);
 			  
 			

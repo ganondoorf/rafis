@@ -28,6 +28,7 @@ namespace Rafis
 
             protected override void OnStart(string[] args)
             {
+                
                 localPort = args[0];
                 ip = args[1];
                 seedPort = args[2];
@@ -67,28 +68,19 @@ namespace Rafis
             }
             private void ThreadNChord()
             {
-                load.load(int.Parse(localPort), ip, int.Parse(seedPort));
+                //load.load(Convert.ToInt32(localPort), ip, Convert.ToInt32(seedPort));
+                load.load(1000, "", 0);
             }
             private void ThreadTransfer()
             {
                 var hostname = System.Net.Dns.GetHostEntry("LocalHost").HostName;
-                System.Net.IPAddress iplocal = GetIPAddress(hostname);
+                System.Net.IPAddress iplocal = Utilities.GetLocalIPAddress();
                 server.load(iplocal,777);
             }
             private void ThreadCore()
             {
                 rserver.load();
             }
-            //método para retornar ip local
-            public static System.Net.IPAddress GetIPAddress(string hostName)
-            {
-                System.Net.NetworkInformation.Ping ping = new System.Net.NetworkInformation.Ping();
-                var replay = ping.Send(hostName);
-                if (replay.Status == System.Net.NetworkInformation.IPStatus.Success)
-                {
-                    return replay.Address;
-                }
-                return null;
-            }
+            
     }
 }

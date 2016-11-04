@@ -270,3 +270,29 @@ Parâmetros afetados são:
    logtoconsole = 
    assemblypath = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.exe
    logfile = C:\Users\Clayton\Documents\Visual Studio 2012\Projects\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o assembly 'C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Criando a origem de EventLog Rafis no log Application...
+Revertendo o assembly 'C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Restaurando o log de eventos para o estado anterior da origem Rafis.
+Instalando o assembly 'C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.InstallLog
+Instalando o serviço Rafis...
+Serviço Rafis foi instalado com êxito.
+Criando a origem de EventLog Rafis no log Application...
+Confirmando o assembly 'C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe'.
+Parâmetros afetados são:
+   logtoconsole = 
+   assemblypath = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.exe
+   logfile = C:\Rafis\SystemTrayApp\bin\Debug\Rafis.InstallLog
