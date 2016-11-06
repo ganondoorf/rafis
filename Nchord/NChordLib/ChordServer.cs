@@ -384,7 +384,7 @@ namespace NChordLib
             }
             catch (Exception ex)
             {
-                Log(LogLevel.Debug, "Remote Accessor", "GetSuccessor error: {0}", ex.Message);
+                Log(LogLevel.Debug, "Remote Accessor", "GetAllNodes error: {0}", ex.Message);
                 throw;
             }
                         

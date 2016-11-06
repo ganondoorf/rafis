@@ -79,6 +79,17 @@ namespace NChordServer
                                         Console.Write("\n------------\n Total de registros neste nó: {0} identificadores.\n------------\n", count);
                                         break;
                                     }
+                                case 'T':
+                                    {
+                                        int count=0;
+                                        foreach (string node in ChordServer.GetAllNodes())
+                                        {
+                                            Console.Write("Nó:{0}", node);
+                                            count++;
+                                        }
+                                        Console.Write("\n------------\n Total de nós na rede: {0} identificadores.\n------------\n", count);
+                                        break;
+                                    }
                                 case 'X':
                                     {
                                         PrintNodeInfo(instance, true);
@@ -161,6 +172,17 @@ namespace NChordServer
                                             count++;
                                         }//0x{0:X}
                                         Console.Write("\n------------\n Total de registros neste nó: {0} identificadores.\n------------\n", count);
+                                        break;
+                                    }
+                                case 'T':
+                                    {
+                                        int count = 0;
+                                        foreach (string node in ChordServer.GetAllNodes())
+                                        {
+                                            Console.Write("Nó:{0}", node);
+                                            count++;
+                                        }
+                                        Console.Write("\n------------\n Total de nós na rede: {0} identificadores.\n------------\n", count);
                                         break;
                                     }
                                 case 'X':
