@@ -46,7 +46,7 @@ namespace Rafis
             //Carrega lista de templates do Banco de Dados 
             selectListTemplates();
 
-            Utilities.log("["+DateTime.Now.ToString() + "]"+" Comparando impressões...", "//RafisCore.log");
+            Utilities.log("["+DateTime.Now + "]"+" Comparando impressões...", "//RafisCore.log");
             while (running)
             {
                 try
@@ -65,24 +65,24 @@ namespace Rafis
 
                         if (match == null)
                         {
-                            Utilities.log("[" + DateTime.Now.ToString() + "] " + "Sem templates compatíveis.", "//RafisCore.log");
+                            Utilities.log("[" + DateTime.Now + "] " + "Sem templates compatíveis.", "//RafisCore.log");
                             continue;
                         }
                         else
                         {
-                            Utilities.log("[" + DateTime.Now.ToString() + "] Template compatível encontrado: CPF " + match.cpf + " com score " + score, "//RafisCore.log");
+                            Utilities.log("[" + DateTime.Now + "] Template compatível encontrado: CPF " + match.cpf + " com score " + score, "//RafisCore.log");
                         }
                     } 
                 }
                 catch (Exception ex)
                 {
-                    Utilities.log("[" + DateTime.Now.ToString() + "] " + "RafisCore: Erro ao acessar o banco afis " + ex);
+                    Utilities.log("[" + DateTime.Now + "] " + "RafisCore: Erro ao acessar o banco afis " + ex);
                 }
 
-                Utilities.log("[" + DateTime.Now.ToString() + "] " + "Rodando...");
+                Utilities.log("[" + DateTime.Now + "] " + "Rodando...");
                 System.Threading.Thread.Sleep(1000);
             }
-            Utilities.log("Encerrando: " + DateTime.Now.ToString());
+            Utilities.log("Encerrando: " + DateTime.Now);
         }
         public void close()
         {
@@ -96,7 +96,7 @@ namespace Rafis
             if (true)//!File.Exists("database.dat") conrrigir
             {
                 //registra o log com total de templates recuperados.
-                Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando " + CoMysql.CountTemplate().ToString() + " templates existentes...", "//RafisCore.log");
+                Utilities.log("[" + DateTime.Now + "] " + "Recuperando " + CoMysql.CountTemplate() + " templates existentes...", "//RafisCore.log");
                 try
                 {
                     TemplateDAO templates = new TemplateDAO();
@@ -105,27 +105,27 @@ namespace Rafis
                     foreach (Template item in templateList)
                     {
                         database.Add(Enroll(item.ItemId, item.PersonId, item.TemplateSA, item.CaminhoImagem, item.Cpf));
-                        Utilities.log("[" + DateTime.Now.ToString() + "] " + "Recuperando template " + item.ItemId + "...", "//RafisCore.log");
+                        Utilities.log("[" + DateTime.Now + "] " + "Recuperando template " + item.ItemId + "...", "//RafisCore.log");
                     }
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("[" + DateTime.Now.ToString() + "] " + "Erro ao acessar o banco de Templates " + ex.Message);
+                    throw new Exception("[" + DateTime.Now + "] " + "Erro ao acessar o banco de Templates " + ex.Message);
                 }
 
                 BinaryFormatter formatter = new BinaryFormatter();
-                Utilities.log("[" + DateTime.Now.ToString() + "] " + "Salvando arquivo stream...", "//RafisCore.log");
+                Utilities.log("[" + DateTime.Now + "] " + "Salvando arquivo stream...", "//RafisCore.log");
                 using (Stream stream = File.Open("database.dat", FileMode.Create))
                 {
                     formatter.Serialize(stream, database);
                 }
-                Utilities.log("[" + DateTime.Now.ToString() + "] " + "Stream cache salvo.", "//RafisCore.log");
+                Utilities.log("[" + DateTime.Now + "] " + "Stream cache salvo.", "//RafisCore.log");
             }
         }
         #endregion
 
         #region Enroll templates
-        static MyPerson Enroll(int itemId, int personId, Byte[] template, string caminho, string cpf)//Enroll(int itemId,Byte[] template)
+        static MyPerson Enroll(int itemId, int personId, byte[] template, string caminho, string cpf)//Enroll(int itemId,Byte[] template)
         {
             MyFingerprint fp = new MyFingerprint();
             fp.Template = template;
