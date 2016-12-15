@@ -57,14 +57,14 @@ namespace Rafis
                 _thread2.Abort();
                     
                 StreamWriter vWriter = new StreamWriter(desiredDir + "\\Rafis.log", true);
-                vWriter.WriteLine("Servico Parado: " + DateTime.Now.ToString()); vWriter.Flush(); vWriter.Close();
+                vWriter.WriteLine("Servico Parado: " + DateTime.Now); vWriter.Flush(); vWriter.Close();
             }
             //temporizador de log...
             private void timer1_Tick(object sender)
             {
                 string files = Utilities.numArquivos(@"C:\Afis");
                 string lastDate = CoMysql.loadState();
-                Utilities.log("Servico Rodando: " + DateTime.Now.ToString()+". Com "+files+" arquivos listados. Última modificação em: "+lastDate);
+                Utilities.log("Servico Rodando: " + DateTime.Now+". Com "+files+" arquivos listados. Última modificação em: "+lastDate);
             }
             private void ThreadNChord()
             {

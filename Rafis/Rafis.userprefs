@@ -1,7 +1,14 @@
 ﻿<Properties StartupConfiguration="{CE73F44C-BC1E-41BC-9543-3EE53649FDCB}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Rafis/RafisLoad.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../SystemTrayApp/TelaPrincipal.cs">
     <Files>
-      <File FileName="Rafis/RafisLoad.cs" Line="1" Column="1" />
+      <File FileName="Rafis/RafisLoad.cs" Line="91" Column="14" />
+      <File FileName="Rafis/Rafis.cs" Line="67" Column="65" />
+      <File FileName="Rafis/RafisCore.cs" Line="109" Column="22" />
+      <File FileName="Rafis/Settings.cs" Line="14" Column="68" />
+      <File FileName="../SystemTrayApp/Settings.cs" Line="1" Column="1" />
+      <File FileName="../SystemTrayApp/Program.cs" Line="1" Column="1" />
+      <File FileName="../SystemTrayApp/Configuracao.cs" Line="1" Column="1" />
+      <File FileName="../SystemTrayApp/TelaPrincipal.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

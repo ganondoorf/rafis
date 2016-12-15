@@ -20,7 +20,7 @@ namespace Rafis
             //inicia novo anel
             int portNum = localport;
             ChordServer.LocalNode = new ChordNode(fqdn, portNum);
-            Utilities.log("Iniciando instância "+ fqdn + " : "+DateTime.Now.ToString());
+            Utilities.log("Iniciando instância "+ fqdn + " : "+DateTime.Now);
             ChordInstance instance;
 
             //Se o Nchord não está rodando...
@@ -41,8 +41,8 @@ namespace Rafis
                     List<string> cpfs = TemplateDAO.GetCPF();
                     foreach (string item in cpfs)
                     {
-                        instance.AddKey(item, instance.Host.ToString());
-                        Utilities.log("[" + DateTime.Now.ToString() + "] " + "Protuário " + item + " do Estado " + instance.Host.ToString() + " inserido na base.");
+                        instance.AddKey(item, instance.Host);
+                        Utilities.log("[" + DateTime.Now + "] " + "Protuário " + item + " do Estado " + instance.Host+ " inserido na base.");
                     }
                 }
                 catch (Exception ex)
@@ -65,10 +65,10 @@ namespace Rafis
                 DBsize = count;
                 //envia templates
                 sendTemplates();
-                Utilities.log("[" + DateTime.Now.ToString() + "] " + "Rodando: " + count + " prontuarios disponíveis.");
+                Utilities.log("[" + DateTime.Now + "] " + "Rodando: " + count + " prontuarios disponíveis.");
                 System.Threading.Thread.Sleep(10000);
             }
-            Utilities.log("Encerrando: " + DateTime.Now.ToString());
+            Utilities.log("Encerrando: " + DateTime.Now);
         }
   
         public void close() 
@@ -109,7 +109,7 @@ namespace Rafis
                     }
                     else
                     {
-                        sender.SendToServer(item, connect[0], Int32.Parse(connect[1]));
+                        sender.SendToServer(item, connect[0], int.Parse(connect[1]));
                     }
                     tempDAO.UpdateSendResult(item.ItemId,1);
                 }
