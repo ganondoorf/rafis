@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="BasicAfis.exe" version="1.0.0.0" publicKeyToken="69339fccf2026497" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BasicAfis" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="BasicAfis.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BasicAfis.exe" size="30720">
+      <assemblyIdentity name="BasicAfis" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>WjHlmDg+y8ghz+u/JCcVaw/n9lI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="438272">
+      <assemblyIdentity name="MySql.Data" version="6.7.4.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>fQzv7UK7JdyYPYs8iwbmzVS4mZc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NBIS.dll" size="763392">
+      <assemblyIdentity name="NBIS" version="1.0.4995.41057" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xn31K4Cw9HE0mtyJJAKQip8QXlU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SourceAFIS.dll" size="118272">
+      <assemblyIdentity name="SourceAFIS" version="1.7.0.41358" publicKeyToken="B195FFD29617DFB3" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>YjXf5TYzbKdx6M2WoONlbcoDc8k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Wsq2Bmp.dll" size="36864">
+      <assemblyIdentity name="Wsq2Bmp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>8mVCNnRCkUi+ML4JEzc7U2Ld0jA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="BasicAfis.exe.config" size="144">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>cpzNzlRjZspwKGLNlX6RAlU3880=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=iron\clayton" issuerKeyHash="13777aaf49a23a87918d3cb47a7a9b8d7c20a035" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>5vAqT0hvFkFqx5KFJ7fmDctfSI0=</DigestValue></Reference></SignedInfo><SignatureValue>lQxFQAnDUusr7Py56l8r+hkcS83X70vtPSnDoygFvFuxvt/1w4iLMLBmyFPB7q+yRxHPWrQPhxi6UEu6jWsvzd+4nhlahW0PF1VnoX6Md7AYbcoWq4pckba7rbaKqQHG9/sg5KGqVrLss7RlmF3wDwMIZXsVCZR/5irflHfh84Q=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tJUKMXr0L8o1g1HhtluATS//oQHsLFs23/GPRIWp8hWx78K3fV8VLWNCFQln7nvWGADg0QwkmNMo347jRve9EH1BKwQWbiYp0duY4iDihgnn8icbRtTlKx/y0DOqlTtkNLxxjXY02OdNtXb0w5jImKmz2bwUrasr5Bgi+KYEX8E=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="8d485fcb0de6b7278592c76a41166f484f2af0e6" Description="" Url=""><as:assemblyIdentity name="BasicAfis.exe" version="1.0.0.0" publicKeyToken="69339fccf2026497" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=iron\clayton</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Q4nKC71tqkgpigGGbMneIe+eAF8=</DigestValue></Reference></SignedInfo><SignatureValue>o+xVGcQQQAUsAG5Q8f/iCUqwf5hxQRkdrjWTwlxPcXY/Ml55tpWnd8HN1FgPPl/tLP/++KNofpkI8/u3qPiYQIkRcOZHG08LXAB7fjMqAKIgwNVYqUpBLwiMOSHx+uVtvxQ4RXvu0F43cHBC5eNYEMtdQ9UemF+uXI6xaL3mv/4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tJUKMXr0L8o1g1HhtluATS//oQHsLFs23/GPRIWp8hWx78K3fV8VLWNCFQln7nvWGADg0QwkmNMo347jRve9EH1BKwQWbiYp0duY4iDihgnn8icbRtTlKx/y0DOqlTtkNLxxjXY02OdNtXb0w5jImKmz2bwUrasr5Bgi+KYEX8E=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIByTCCATKgAwIBAgIQJcc0G3YY7IVP8tXNzXSrbTANBgkqhkiG9w0BAQUFADAjMSEwHwYDVQQDHhgAaQByAG8AbgBcAGMAbABhAHkAdABvAG4wHhcNMTQwNzAyMTA0NDEyWhcNMTUwNzAyMTY0NDEyWjAjMSEwHwYDVQQDHhgAaQByAG8AbgBcAGMAbABhAHkAdABvAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALSVCjF69C/KNYNR4bZbgE0v/6EB7CxbNt/xj0SFqfIVse/Ct31fFS1jQhUJZ+571hgA4NEMJJjTKN+O40b3vRB9QSsEFm4mKdHbmOIg4oYJ5/InG0bU5Ssf8tAzqpU7ZDS8cY12NNjnTbV29MOYyJips9m8FK2rK+QYIvimBF/BAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEADULL5ftqRe9aHgLiVI6+wlZKwOrd69m7BMHVQy3GFB0Ax7krlJA+u8HarWX9y5WKUzSJSgjohj9dDNl/Th0KSEkYVNVJ5Y/Y9MFv3A7AmauCzdAuluyiMv9hoEEFVRnW2AsSwDsKeahEI+oJjDqhoQKSLiCsAaoD84tLRQrKEpI=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

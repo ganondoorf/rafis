@@ -1,0 +1,7 @@
+/Users/clayton/Projetos/rafis/rafis/Nchord/NChordLib/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/clayton/Projetos/rafis/rafis/SystemTrayApp/bin/Debug/Nchord/NChordLib.dll.mdb
+/Users/clayton/Projetos/rafis/rafis/SystemTrayApp/bin/Debug/Nchord/NChordLib.pdb
+/Users/clayton/Projetos/rafis/rafis/SystemTrayApp/bin/Debug/Nchord/NChordLib.dll
+/Users/clayton/Projetos/rafis/rafis/Nchord/NChordLib/obj/Debug/NChordLib.dll
+/Users/clayton/Projetos/rafis/rafis/Nchord/NChordLib/obj/Debug/NChordLib.dll.mdb
+/Users/clayton/Projetos/rafis/rafis/Nchord/NChordLib/obj/Debug/NChordLib.pdb
