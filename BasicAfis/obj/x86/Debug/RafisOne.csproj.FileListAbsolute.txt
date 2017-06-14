@@ -1,0 +1,3 @@
+Y:\Projetos\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+Y:\Projetos\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+Y:\Projetos\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb

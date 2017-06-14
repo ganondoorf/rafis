@@ -1,0 +1,108 @@
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form1.resources
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Properties.Resources.resources
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\ResGen.read.1.tlog
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\ResGen.write.1.tlog
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\bin\Debug\BasicAfis.pdb
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\user\documents\visual studio 2010\Projects\BasicAfis\BasicAfis\bin\Debug\SourceAFIS.dll
+H:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form1.resources
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Properties.Resources.resources
+H:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe
+H:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.pdb
+H:\BasicAfis\BasicAfis\bin\Debug\SourceAFIS.dll
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form2.resources
+H:\BasicAfis\BasicAfis\bin\Debug\NBIS.dll
+H:\BasicAfis\BasicAfis\bin\Debug\Wsq2Bmp.dll
+H:\BasicAfis\BasicAfis\bin\Debug\MySql.Data.dll
+H:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.manifest
+H:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.application
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe.manifest
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.application
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csprojResolveAssemblyReference.cache
+H:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csproj.GenerateResource.Cache
+D:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb
+D:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.manifest
+D:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.application
+D:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe
+D:\BasicAfis\BasicAfis\bin\Debug\BasicAfis.pdb
+D:\BasicAfis\BasicAfis\bin\Debug\NBIS.dll
+D:\BasicAfis\BasicAfis\bin\Debug\SourceAFIS.dll
+D:\BasicAfis\BasicAfis\bin\Debug\Wsq2Bmp.dll
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csprojResolveAssemblyReference.cache
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form1.resources
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form2.resources
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Properties.Resources.resources
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csproj.GenerateResource.Cache
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe.manifest
+D:\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.application
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.manifest
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.application
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.pdb
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\NBIS.dll
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\SourceAFIS.dll
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csprojResolveAssemblyReference.cache
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form1.resources
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form2.resources
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Properties.Resources.resources
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csproj.GenerateResource.Cache
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe.manifest
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.application
+D:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form3.resources
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\PictureBox.dll
+D:\AFIS\BasicAfis\BasicAfis\bin\Debug\PictureBox.pdb
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.manifest
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.application
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.pdb
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\NBIS.dll
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\PictureBox.dll
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\SourceAFIS.dll
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\bin\Debug\PictureBox.pdb
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csprojResolveAssemblyReference.cache
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form1.resources
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form2.resources
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form3.resources
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Properties.Resources.resources
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csproj.GenerateResource.Cache
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe.manifest
+\\psf\BKP-Clayton\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.application
+F:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+F:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+F:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb
+E:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb
+E:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.manifest
+E:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.application
+E:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe
+E:\AFIS\BasicAfis\BasicAfis\bin\Debug\BasicAfis.pdb
+E:\AFIS\BasicAfis\BasicAfis\bin\Debug\NBIS.dll
+E:\AFIS\BasicAfis\BasicAfis\bin\Debug\SourceAFIS.dll
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csprojResolveAssemblyReference.cache
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form1.resources
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Form2.resources
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.Properties.Resources.resources
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.csproj.GenerateResource.Cache
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe.manifest
+E:\AFIS\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.application
+Y:\Projetos\BasicAfis\BasicAfis\bin\Debug\BasicAfis.exe.config
+Y:\Projetos\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.exe
+Y:\Projetos\BasicAfis\BasicAfis\obj\x86\Debug\BasicAfis.pdb

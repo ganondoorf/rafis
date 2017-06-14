@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PixelFormatsConverter</name>
+    </assembly>
+    <members>
+        <member name="M:PixelFormatsConverter.PixelFormatConverterExtensions.Convert(System.Drawing.Imaging.PixelFormat)">
+            <summary>
+            Convert from System.Drawing.Imaging.PixelFormat to System.Windows.Media.PixelFormat
+            </summary>
+            <param name="pixelFormat"></param>
+            <exception cref="T:System.NotSupportedException">Convertion is not available</exception>
+            <returns></returns>
+        </member>
+        <member name="M:PixelFormatsConverter.PixelFormatConverterExtensions.Convert(System.Windows.Media.PixelFormat)">
+            <summary>
+            Convert from System.Windows.Media.PixelFormat to System.Drawing.Imaging.PixelFormat
+            </summary>
+            <param name="pixelFormat"></param>
+            <exception cref="T:System.NotSupportedException">Convertion is not available</exception>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

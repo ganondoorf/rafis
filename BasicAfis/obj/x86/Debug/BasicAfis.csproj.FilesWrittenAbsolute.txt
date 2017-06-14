@@ -1,0 +1,10 @@
+/Users/clayton/Projetos/BasicAfis/BasicAfis/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/clayton/Projetos/BasicAfis/BasicAfis/obj/x86/Debug/BasicAfis.Form1.resources
+/Users/clayton/Projetos/BasicAfis/BasicAfis/obj/x86/Debug/BasicAfis.Form2.resources
+/Users/clayton/Projetos/BasicAfis/BasicAfis/obj/x86/Debug/BasicAfis.Properties.Resources.resources
+/Users/clayton/Projetos/BasicAfis/BasicAfis/obj/x86/Debug/BasicAfis.exe
+/Users/clayton/Projetos/BasicAfis/BasicAfis/obj/x86/Debug/BasicAfis.pdb
+/Users/clayton/Projetos/BasicAfis/BasicAfis/bin/Debug/MySql.Data.dll
+/Users/clayton/Projetos/BasicAfis/BasicAfis/bin/Debug/NBIS.dll
+/Users/clayton/Projetos/BasicAfis/BasicAfis/bin/Debug/SourceAFIS.dll
+/Users/clayton/Projetos/BasicAfis/BasicAfis/bin/Debug/Wsq2Bmp.dll

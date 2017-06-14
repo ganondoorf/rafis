@@ -1,0 +1,9 @@
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/bin/Debug/DAO.dll.config
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/bin/Debug/DAO.dll.mdb
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/bin/Debug/DAO.pdb
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/bin/Debug/DAO.dll
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/obj/Debug/DAO.dll
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/obj/Debug/DAO.dll.mdb
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/obj/Debug/DAO.pdb
+/Users/clayton/Projetos/rafis/rafis/Rafis/DAO/bin/Debug/MySql.Data.dll

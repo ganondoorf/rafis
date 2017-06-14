@@ -1,0 +1,12 @@
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\Rafis.DAL.dll.config
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\Rafis.DAL.dll
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\Rafis.DAL.pdb
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\EntityFramework.dll
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\EntityFramework.SqlServer.dll
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\Rafis.Entidades.dll
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\Rafis.Entidades.pdb
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\EntityFramework.xml
+Y:\Projetos\BasicAfis\Rafis.DAL\bin\Debug\EntityFramework.SqlServer.xml
+Y:\Projetos\BasicAfis\Rafis.DAL\obj\Debug\Rafis.DAL.csprojResolveAssemblyReference.cache
+Y:\Projetos\BasicAfis\Rafis.DAL\obj\Debug\Rafis.DAL.dll
+Y:\Projetos\BasicAfis\Rafis.DAL\obj\Debug\Rafis.DAL.pdb

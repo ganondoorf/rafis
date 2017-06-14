@@ -1,0 +1,5 @@
+Y:\Projetos\BasicAfis\Rafis.Entidades\bin\Debug\Rafis.Entidades.dll
+Y:\Projetos\BasicAfis\Rafis.Entidades\bin\Debug\Rafis.Entidades.pdb
+Y:\Projetos\BasicAfis\Rafis.Entidades\obj\Debug\Rafis.Entidades.csprojResolveAssemblyReference.cache
+Y:\Projetos\BasicAfis\Rafis.Entidades\obj\Debug\Rafis.Entidades.dll
+Y:\Projetos\BasicAfis\Rafis.Entidades\obj\Debug\Rafis.Entidades.pdb
